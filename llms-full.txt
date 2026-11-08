@@ -1,0 +1,566 @@
+# Space Works — full product facts
+
+> Space Works is free, open-source, self-hosted management software for makerspaces, fab labs, hackerspaces and tool libraries. One install covers inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships, for one space or many.
+
+Website: https://spaceworks-labs.github.io/SpaceWorks-Website/
+Source: https://github.com/SpaceWorks-Labs
+Documentation: https://spaceworks-labs.github.io/SpaceWorks-Docs/
+Licence: AGPL-3.0 for every project
+Last updated: 2026-11-08
+
+## Space Works platform
+
+Version 0.9.3, released 2026-11-08. Built with Django, Django REST Framework, React, TypeScript, PostgreSQL, Redis, Celery, S3-compatible storage, Docker Compose.
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash`
+
+- Public catalogue, borrow requests and QR check-out with photo evidence at every handover
+- Machine registry, certifications, service queue and 3D-printing requests with filament tracking
+- Events with registration, waitlists, offline QR check-in, badges and certificates
+- Bookable rooms and resources with recurring slots and calendar feeds
+- Personal accounts, membership plans and renewals, optional Stripe or Razorpay payments
+- Many makerspaces on one server, roles you define, an append-only audit log
+- Encrypted, signed backups and updates from GitHub releases with automatic rollback
+
+### Questions
+
+**What is Space Works?**
+Space Works is free, open-source, self-hosted software for makerspaces, fab labs, hackerspaces, tool libraries and the communities around them. The main platform covers inventory and tool lending, machines and 3D printing, events, bookings and memberships in one install. Six standalone apps cover one of those jobs each.
+
+**Is Space Works free?**
+Yes. Every Space Works project is open source under the GNU Affero General Public License v3 (AGPL-3.0). There is no licence fee. You can use, study, modify and share it, including for commercial work, and you pay only for the server you host it on.
+
+**How do I install Space Works?**
+On a Linux server, as a user with sudo, run the one-line installer: curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash. It asks every question first, changes nothing until you confirm, and runs the platform with Docker Compose. The documentation covers manual installs and hosting options.
+
+**Do I need the whole platform or one app?**
+Start with the main Space Works platform if you run a whole makerspace. If you only need one job done, the standalone apps (Inventory, Machines, Events, Bookings, Organization and Workspace) each install on their own with their own database. Running several apps does not automatically combine their accounts or data; they connect through REST APIs and webhooks where supported.
+
+**Can one installation run several makerspaces?**
+Yes. One Space Works server can host many makerspaces, each fully separate with its own members, inventory, roles, settings and audit trail. Networks, universities and chains can link spaces under one organisation with a shared event catalogue.
+
+**Does Space Works take payments?**
+Payments are optional. The main platform supports Stripe or Razorpay checkout; without them, fees and deposits are tracked and settled at the desk. The standalone Events, Bookings, Machines and Organization apps take Razorpay, Stripe or offline payments, and Organization adds UPI and GST receipts for Indian organisations.
+
+**Is there a mobile app?**
+Native iOS (SwiftUI, iOS 17 and later) and Android (Kotlin and Jetpack Compose, Android 8 and later) apps are in development. Both connect to your own Space Works server for equipment, requests, loans, bookings, events and QR workflows.
+
+**Where is my data stored?**
+On your own server. Space Works is self-hosted, so member, inventory and payment records stay in your database. Personal data is encrypted per space, integration secrets are encrypted at rest, and backups are encrypted and signed.
+
+**Who makes Space Works?**
+Space Works was started by Shaan Shoukath at TinkerSpace Kochi, a community makerspace by TinkerHub in Kerala, India, and is built in the open by the Space Works community on GitHub. It runs at TinkerHub Kochi and TinkerHub Calicut, serving more than 1,000 members.
+
+## Space Works Inventory
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/inventory/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Inventory
+Status: Released (0.6.0)
+Built with: Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, BullMQ, Silo object storage, Caddy, Docker Compose (Node 22)
+Licence: AGPL-3.0-or-later
+For: makerspaces, tool libraries, fab labs
+
+Space Works Inventory is a free, open-source, self-hosted stock room and lending desk for makerspaces, tool libraries and fab labs that tracks stock, lends tools with a QR scan and moves stock between rooms or makerspaces.
+
+Space Works Inventory keeps the catalogue, shelves and bins in order, lends tools to members with a QR scan and a photo at every handover, counts stock and moves it between rooms or between makerspaces, all on infrastructure you control. One installation runs several makerspaces, each with its own members, roles, settings and audit trail. It is fully standalone, and its REST API and signed webhooks connect it to the other Space Works apps or anything else.
+
+Fully standalone with its own installation and database. Its REST API and signed webhooks connect it to the other Space Works apps (Events, Workspace, Bookings, Machines) or anything else. Its inventory, lending and transfer domain is ported from the original Space Works makerspace manager.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Inventory/main/install.sh | bash`
+Deploy to Render: https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Inventory
+
+### Set up in minutes
+
+- A first-run wizard for the admin, your first makerspace, locations, categories, units, roles, lending and fees.
+- Locations nest from building to room to shelf to bin.
+- Bulk import from CSV or Excel with a validated preview, templates and a realistic sample inventory.
+
+### Catalogue and stock
+
+- Quantity-tracked items and serialized assets, with photos, suppliers, costs and per-item lending rules.
+- QR labels for items, assets, shelves, kits and containers, printed as PDF sheets in three sizes.
+- Receipts, adjustments with a reason, moves between shelves, a repair shelf and an append-only stock ledger.
+- Cycle counts, blind if you like, scheduled or ad hoc, with four-eyes posting above a threshold.
+- Low-stock alerts, a to-buy list and stock valuation at weighted average cost.
+
+### Transfers between rooms and makerspaces
+
+- Request, approve, pick and dispatch with QR scans, then receive in one go or in parts.
+- Move stock between locations of a space or between makerspaces of the same installation.
+- Damaged units go to the repair shelf, missing units are declared and refused units return to the sender.
+- Stock stays correct in transit, and both spaces see the full timeline.
+
+### Lending
+
+- A member catalogue and an optional public one, with requests, staff approval, renewals and self-checkout.
+- Guided issue and return desk flows: scan labels, check lines, add photos and remarks.
+- Overdue reminders and escalation; lost or damaged items open incidents that can restrict borrowing.
+- Free or paid lending: deposits, daily, weekly or flat rental, late fees and damage or loss charges.
+
+### Repairs and finance
+
+- Report damaged items, keep a technician directory and send repair requests by email, WhatsApp or Telegram.
+- External technicians get a private link; staff verify fixes and pay them.
+- One finance ledger for payments, refunds, payouts and purchases, with CSV or Excel downloads.
+
+### Roles, reports and integrations
+
+- Roles for Inventory manager, Staff, Member and Technician, with every settings change audited.
+- Reports with CSV and Excel exports, an audit log, and email and in-app notifications.
+- A REST API with API keys and signed outbound webhooks.
+- Email and password, emailed magic links and authenticator-app MFA.
+
+### Questions
+
+**Is Space Works Inventory free?**
+Yes. Space Works Inventory is free, open-source software under the GNU AGPL v3.0 or later, so you can use, study, change and share it, including for your own makerspace.
+
+**Can I self-host Space Works Inventory?**
+Yes. Space Works Inventory installs on your own 64-bit Linux server with one curl command and runs with PostgreSQL 16, Redis 7, Silo object storage and Caddy for automatic HTTPS. An optional cloud setup runs on free plans with Render and managed services.
+
+**Can Space Works Inventory charge for tool loans?**
+Yes, lending can be free or paid. Space Works Inventory supports refundable deposits, rental fees, late fees and damage or loss charges; members pay with Razorpay or Stripe, staff record cash or bank payments, or members choose pay later.
+
+**Can one Space Works Inventory install run several makerspaces?**
+Yes. One installation of Space Works Inventory runs several makerspaces, each with its own members, roles, settings and audit trail, and stock can be transferred between them.
+
+**Does Space Works Inventory work with the main Space Works platform?**
+Space Works Inventory is fully standalone with its own installation. Its REST API and signed webhooks connect it to the other Space Works apps (Events, Workspace, Bookings and Machines) or anything else.
+
+## Space Works Machines
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/machines/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Machines
+Status: Released (0.6.0)
+Built with: Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, BullMQ, Silo object storage, Caddy, Docker Compose (Node 22)
+Licence: AGPL-3.0-or-later
+For: makerspaces, fab labs, college workshops
+
+Space Works Machines is a free, open-source, self-hosted machine management app for makerspaces, fab labs and college workshops that runs job requests through a fair queue, takes payments and tracks consumables, maintenance and repairs.
+
+Space Works Machines lists your 3D printers, laser cutters, CNC routers and the rest, takes job requests with files and a fair queue, prices them or keeps them free, and takes payments online or at the desk. Consumables, maintenance, faults and warranties sit in one place, and printers and other tools can connect through a REST API and webhooks. One install runs many makerspaces, each with its own staff, makers, machines, prices and payment account, and your makers' data stays in your own database.
+
+A separate self-hosted app with its own installer and database. Its rules for machines, printing, maintenance and payments are ported from the Django Space Works apps, and it connects to printers and other tools through a REST API and signed webhooks.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Machines/main/install.sh | bash`
+Deploy to Render: https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Machines
+
+### Machines and the public catalogue
+
+- Machine types for FDM and resin printers, laser cutters, CNC routers and mills, vinyl cutters, PCB mills and more.
+- Each type sets its own spec fields, request fields, file rules, materials and colours.
+- Machine records with photos, manuals, SOPs, safety sheets and a status that always carries a word.
+- A public catalogue per space that never shows notes, costs, serial numbers or meters.
+
+### Jobs, from request to collection
+
+- Makers request a job with files checked against the machine type's rules.
+- STL and G-code files are parsed for size and slicer estimates.
+- A fair queue with positions and an estimated wait.
+- Approve, start, pause, complete, fail, collect and reprint, with a timeline and a private status link.
+- Consumables are reserved when a job starts and reconciled when it finishes.
+
+### Prices and payments
+
+- Free, flat, time, material or time and material pricing, with member and public rates, minimum charges and tax.
+- Payment upfront, on completion with an optional deposit, or pay later.
+- Each space's own Razorpay or Stripe account, or desk payments by cash, UPI, bank transfer or card terminal.
+- Refunds for rejected, cancelled and failed jobs follow your rules, including partial refunds.
+
+### Consumables, upkeep and repairs
+
+- Consumable pools for filament, resin and sheets, with an append-only ledger and low-stock alerts.
+- Maintenance schedules by date, machine hours or job count, with reminders.
+- Fault reports, downtime windows, warranties with expiry reminders and a service history per machine.
+- Ask several technicians at once by email, WhatsApp or Telegram; the first to accept takes the repair.
+
+### Reports and finance
+
+- Reports on jobs, utilisation, MTBF, MTTR, consumables, revenue, maintenance and repair spend.
+- CSV and Excel export for every report.
+- An append-only finance ledger with money in, out and net by day, week, month or financial year.
+- Money is visible to the machine manager only.
+
+### Connections and accounts
+
+- A REST API at /api/v1 with per-space keys and scopes, and an OpenAPI document.
+- Signed outbound webhooks with retries and a delivery log.
+- Printer connections today: manual and a built-in simulated printer. OctoPrint, Moonraker/Klipper, Bambu Lab and PrusaLink are coming soon.
+- Team chat alerts to Slack, Discord, Mattermost, Telegram and WhatsApp.
+- Six roles from machine manager to maker; staff sign in with an authenticator app.
+
+### Questions
+
+**Is Space Works Machines free?**
+Yes. Space Works Machines is free, open-source software under the GNU AGPL v3.0 or later, and it is self-hosted, so your makers' data stays in your own database.
+
+**Can Space Works Machines take payments for 3D print and laser jobs?**
+Yes. Space Works Machines prices jobs as free, flat, time, material or time and material, and takes payment through each space's own Razorpay or Stripe account or records it at the desk (cash, UPI, bank transfer or card terminal).
+
+**Does Space Works Machines connect to my 3D printers?**
+Today Space Works Machines offers a manual connection and a built-in simulated printer; OctoPrint, Moonraker/Klipper, Bambu Lab and PrusaLink connections are listed as coming soon. Other tools can connect through its REST API and signed webhooks.
+
+**How do I install Space Works Machines?**
+Run the one-line installer on a Linux server with at least 4 GiB RAM and swap; it checks the server, asks its questions and shows a summary before installing. You can also deploy it to Render with the included Blueprint and your own managed PostgreSQL, Redis, bucket and SMTP.
+
+**Does Space Works Machines work with the main Space Works platform?**
+Space Works Machines is a separate app with its own installer and database. Its rules for machines, printing, maintenance and payments are ported from the Django Space Works apps, and it connects to other systems through a REST API and signed webhooks.
+
+## Space Works Events
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/events/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Events
+Status: Released (0.12.0)
+Built with: Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, Silo object storage, Caddy, Docker Compose (Node 22); Helm chart for Kubernetes
+Licence: AGPL-3.0-or-later
+For: makers, communities, event organisers, organisations running member programmes
+
+Space Works Events is a free, open-source, self-hosted event platform for maker and community events that handles event pages, registrations, live QR tickets, door check-in, ID cards, member programmes, feedback and certificates.
+
+Space Works Events lets you publish an event page, take registrations, send live QR tickets, check people in at the door, print ID cards, run a member programme and follow up with feedback and certificates, all from one self-hosted app you control. Events are free by default; when you charge, tickets are paid straight to your own Razorpay or Stripe account with no platform fee. There are no ads or third-party trackers, guests' data stays in your own database, and it is built on Yuyu by Abhiram N J.
+
+A self-hosted app with its own installer and database, built on Yuyu by Abhiram N J. It connects to other systems through a tenant-bound machine API with scoped, rotating credentials.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Events/main/install.sh | bash`
+Deploy to Render: https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Events
+
+### Plan and publish
+
+- Event pages in your colours with a cover photo editor, tracks, speakers, venues, sponsors, FAQs and resources.
+- Public, hidden-link, invite-only or approval-required events, with an option to list them on Discover.
+- Short links like /aB3x9Kq for every event.
+- Recurring series, organisation roles and event co-organisers.
+
+### Registration
+
+- Custom registration forms with ten question types, help text and show-only-if logic.
+- Capacity limits, waitlists and approvals, with undo.
+- Confirmation emails with a calendar invite, sent through a durable outbox.
+
+### Paid tickets (optional)
+
+- Buyers pay into your own Razorpay or Stripe account, with no platform fee.
+- Fixed or pay-what-you-want prices, group tickets, extras, promo and access codes, members-only tickets and series passes.
+- Refunds, transfers, pay-at-the-desk, PDF receipts, chargeback alerts and an orders CSV.
+
+### Tickets and the door
+
+- Live QR tickets that tear off their stub on the guest's phone at check-in.
+- A check-in desk for QR, search and manual check-in, with undo.
+- Offline check-in that keeps scanning when venue Wi-Fi drops and syncs later.
+- PIN-locked door stations so volunteers can check people in without an account.
+
+### Badges and member IDs
+
+- Colour ID cards and badges with your logo, the guest's check-in QR and chosen registration answers.
+- A badge designer with stock sizes such as A6, 4 x 6 in and CR80, and one print-ready PDF.
+- Member ID programmes with a join form, CSV or Google Sheet import and approvals.
+- A verify QR on every member card that shows Valid, Expired or Revoked.
+
+### Follow up and run it safely
+
+- Broadcasts with 13 starter templates, five email designs, a review step and a five-second undo.
+- Feedback forms, a registration funnel in analytics and certificates built on your own artwork.
+- Required authenticator-app MFA for organisation staff and a breached-password check.
+- No ads and no third-party trackers.
+
+### Questions
+
+**Is Space Works Events free?**
+Yes. Space Works Events is free, open-source software under the GNU AGPL v3.0 or later, and events are free by default. It has no ads and no third-party trackers.
+
+**Does Space Works Events take a cut of ticket sales?**
+No. When you charge for an event, buyers pay on Razorpay's or Stripe's page and the money goes straight to your own account, with no platform fee.
+
+**Can Space Works Events check people in without internet?**
+Yes. Space Works Events can download the roster for offline check-in, keep scanning when the venue Wi-Fi drops and sync when you are back online. PIN-locked door stations let volunteers check people in without an account.
+
+**How do I install Space Works Events?**
+Run the one-line curl installer on a 64-bit Linux server; a small instance needs 2 vCPU, 2 GB RAM and 30 GB SSD. An optional cloud setup runs on free plans with Render, Supabase, Upstash, Cloudflare R2 and Brevo.
+
+**Can Space Works Events connect to other systems?**
+Yes. Space Works Events has a tenant-bound machine API (v1) with scoped, rotating credentials for connecting other systems.
+
+## Space Works Bookings
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/bookings/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Bookings
+Status: Released (0.6.0)
+Built with: Next.js 16, React, Prisma, PostgreSQL, Redis, BullMQ, Silo object storage, Caddy, Docker Compose (Node 22)
+Licence: AGPL-3.0-or-later
+For: makerspaces, communities
+
+Space Works Bookings is a free, open-source, self-hosted booking system for a makerspace's rooms, studios, desks and halls that publishes spaces with hours and prices, takes online bookings and payments, and runs the front desk.
+
+Space Works Bookings publishes your spaces with their own hours, prices and rules, lets members and guests book them online, and runs the front desk from a day sheet: approvals, check-in, no-shows and reschedules. Every booking can be free or paid, with Razorpay, Stripe, payments at the desk or pay later, and refunds that follow your own cancellation policy. One self-hosted install runs several makerspaces, each with its own team, money and branding, and your customers' data stays in your own database.
+
+A separate self-hosted app with its own installer and database. Its booking and payment rules are ported from the original Space Works app, and it connects to other tools through a REST API and signed webhooks.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Bookings/main/install.sh | bash`
+Deploy to Render: https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Bookings
+
+### Publish your spaces
+
+- Rooms, studios, desks and halls with photos, capacity, amenities and any number of identical units.
+- Opening hours per makerspace or per space, holiday exceptions and blackouts, correct across daylight saving.
+- Hourly, half-day and day rates, member rates, peak pricing and add-ons.
+- GST inclusive or exclusive, with a SAC per space.
+
+### Take bookings
+
+- A public page per makerspace and per space, with live availability and a live quote.
+- Recurring daily or weekly bookings that list any clashes before you book.
+- Free instant, free with approval, pay now, deposit or pay later, overridable per space.
+- Holds during checkout, and the database refuses two bookings for the same slot.
+- A private link for each customer to cancel, reschedule, add to calendar, pay and download a statement.
+
+### Run the front desk
+
+- A Today sheet with check-in by button or code, no-shows and a calendar by day or week.
+- Staff bookings on behalf of customers, approvals, moves between spaces and reschedules, all on a timeline.
+- Branded emails with calendar invites, and personal and team calendar feeds.
+
+### Payments and refunds
+
+- Razorpay Checkout, Stripe Checkout, cash, UPI, bank transfer or pay later.
+- Gapless receipts and credit notes.
+- Refunds by cancellation policy tiers, venue cancellations, cheaper reschedules and duplicate or late payments.
+- A reconciliation page for open checkouts, payments to review and unfinished refunds.
+
+### Repairs and reports
+
+- Staff and customers report problems with a space, with urgency and photos.
+- Ask several technicians by email, WhatsApp or Telegram; block a space's bookings while it is out of service.
+- Reports on utilisation, bookings, no-shows, money received, refunds and repairs, with audited CSV exports.
+- A finance ledger with money in, out and net, visible to bookings managers only.
+
+### Integrations and security
+
+- A REST API with read and write keys, documented in OpenAPI.
+- Signed webhooks for bookings, payments, refunds, repairs and the finance ledger, with retries.
+- Authenticator codes for all staff, known devices, IP blocking and breached-password checks.
+- No third-party sign-in and no trackers.
+
+### Questions
+
+**Is Space Works Bookings free?**
+Yes. Space Works Bookings is free, open-source software under the GNU AGPL v3.0 or later, and you host it yourself so your customers' data stays in your own database.
+
+**Does Space Works Bookings take payments?**
+Yes. Each booking can be free or paid, through Razorpay Checkout, Stripe Checkout, cash, UPI, bank transfer or pay later. Refunds follow your own cancellation policy, with gapless receipts and credit notes.
+
+**Can Space Works Bookings prevent double bookings?**
+Yes. Space Works Bookings holds a time while someone checks out, and the database refuses a second booking for the same slot.
+
+**How do I install Space Works Bookings?**
+Run the one-line curl installer on your own server; it installs Docker if needed and runs the website, API, worker, PostgreSQL, Redis and private storage behind Caddy with automatic HTTPS. You can also deploy it to Render with the included Blueprint.
+
+**Does Space Works Bookings work with the main Space Works platform?**
+Space Works Bookings is a separate app with its own installer and database; its booking and payment rules are ported from the original Space Works app. It connects to your other tools through a REST API and signed webhooks.
+
+## Space Works Organization
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/organization/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Organization
+Status: In active development (0.8.1)
+Built with: Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, BullMQ, Silo object storage, Caddy, Docker Compose (Node 22)
+Licence: AGPL-3.0-or-later
+For: clubs, associations, societies, alumni bodies, secretaries and treasurers, Indian organisations
+
+Space Works Organization is a free, open-source, self-hosted membership app for clubs, associations, societies and alumni bodies that handles join applications, fees by UPI or online, GST-correct receipts, verifiable member cards and renewals.
+
+Space Works Organization lets you publish plans, take join applications, approve members, collect fees online or by UPI, issue GST-correct receipts and member cards anyone can check with a scan, chase renewals and read the year at a glance. It is built for the secretaries and treasurers who run this by hand today, and for Indian organisations first, with the April to March year, GST and UPI built in. One deployment hosts many organisations, each fully isolated, and the app is in active development, phase by phase.
+
+Part of the Space Works family, installed and run as its own self-hosted app on one server.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Organization/main/install.sh | bash`
+
+### Plans and joining
+
+- Fixed financial-year or rolling plans, with joining fees, renewal prices and other currencies.
+- A public page per organisation with every plan and a Join or Apply to join button.
+- Join forms per plan with your own questions, conditional questions, photos and recorded consent.
+- Open, approval-only or invitation-only joining.
+
+### Members and units
+
+- A member register with filters for active, waiting, in grace, lapsed and ending soon, plus bulk approvals.
+- Districts, chapters or branches as units, with managers scoped to their own unit.
+- CSV or Google Sheets import and an export of everything.
+- A membership sweep through grace and lapse, with renewal reminders by email.
+
+### Payments and GST receipts
+
+- Razorpay or Stripe on the organisation's own account, or UPI, bank transfer and cash.
+- A UPI QR for the exact amount due.
+- Maker-checker: one person records a payment, another confirms it.
+- Gapless receipt numbers per financial year, tax invoices with CGST and SGST or IGST, and credit notes.
+
+### ID cards and verification
+
+- One card per member and plan, in your colours, with photo and role.
+- A verify QR that opens a public check page: Valid, Expired, Revoked or Replaced.
+- Staff who scan a card can verify, renew, record a payment, extend or revoke.
+- PDF and PNG downloads and bulk exports for printing.
+
+### Member portal and reports
+
+- Members sign in once and see every organisation they belong to, with cards and receipts.
+- Members pay what is due, renew, update details, request a refund, export data or ask to be erased.
+- Reports on membership change, renewal rate, churn, renewals due, money by plan and GST summaries.
+- PDF snapshots and CSV exports for the platform, each organisation and each unit.
+
+### Questions
+
+**Is Space Works Organization free?**
+Yes. Space Works Organization is free, open-source software under the GNU AGPL v3.0 or later, and you host it yourself.
+
+**Does Space Works Organization support GST and UPI?**
+Yes. Space Works Organization is built for Indian organisations first: it uses the April to March year, shows a UPI QR for the exact amount, and issues gapless receipts, tax invoices with CGST and SGST or IGST, bills of supply and credit notes.
+
+**Can one Space Works Organization install host several organisations?**
+Yes. One deployment of Space Works Organization hosts many organisations, each with its own plans, members, money and pages, fully isolated from the others.
+
+**How do I install Space Works Organization?**
+Run the one-line curl installer on a 64-bit Linux server, or on macOS or Windows with Docker Desktop. It asks every question first, shows a summary and changes nothing until you confirm.
+
+**Is Space Works Organization ready to use?**
+Space Works Organization is in active development, phase by phase. Its latest release is 0.8.1.
+
+## Space Works Workspace
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/workspace/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-Workspace
+Status: Released (0.6.7)
+Built with: Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, BullMQ, Silo object storage, Caddy, Docker Compose (Node 22)
+Licence: AGPL-3.0-or-later
+For: non-profits, NGOs, community offices, makerspace operating teams, small startups
+
+Space Works Workspace is a free, open-source, self-hosted operations tool for non-profits, NGOs, community offices, makerspace teams and small startups that brings projects, chat, money, people, governance and application secrets into one place.
+
+Space Works Workspace is for the team that runs an organisation: it plans work, runs money, looks after people, keeps governance in order and manages application secrets in one place. It started with the Space Works maker community at TinkerSpace Kochi, and every record, file and secret stays on infrastructure you control, with separate workspaces, roles and an audit trail. Member-facing work lives in the sibling apps: Space Works for the makerspace, Space Works Events for events and tickets, and Space Works Organization for memberships.
+
+An internal operations tool with its own installer and database. Member-facing work lives in the sibling apps: Space Works for the makerspace, Space Works Events for events and tickets, and Space Works Organization for memberships.
+
+Install: `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Workspace/main/install.sh | bash`
+Deploy to Render: https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Workspace
+
+### Work and projects
+
+- Projects with kanban boards, a timeline, milestones, dependencies, blockers and weekly status updates.
+- Tasks with assignees, priorities, subtasks, recurrence and checklists.
+- Meetings with agendas, decisions and action items; goals, key results, polls and ideas.
+- A team calendar with RSVPs, Google Calendar sync and Google Meet links.
+
+### Chat, docs and people
+
+- Channels, direct messages, threads, reactions, mentions and live updates.
+- Rich-text docs with revisions and SOP review reminders, and private versioned files.
+- Member profiles, departments, an org chart, onboarding, training, leave, attendance and volunteer hours.
+- Hiring, rota and shift swaps, a confidential help desk and a safety log.
+
+### Money and funding
+
+- Income and expenses, restricted funds, cost centres, budgets and month-end close.
+- Supplier bills, purchase requests with approvals, reimbursements and receipt uploads.
+- Payroll records, petty cash, and PF, ESI, PT and TDS remittances on one upcoming-dues list.
+- Grants, CSR, donations, donor receipts, GST invoices, and 80G and utilisation certificates.
+
+### Governance
+
+- A compliance calendar, board meetings and resolutions, vendors and contracts.
+- Insurance and statutory registers, risks and drills, and frozen board packs.
+- Restricted safeguarding and POSH cases with explicit case access.
+
+### Secrets management
+
+- Application secrets by project, environment and folder, in the spirit of Infisical.
+- Envelope encryption under a rotatable root key, version history and point-in-time rollback.
+- Masked values with audited reveal, and fresh-MFA access to production.
+- The sww command line and Node SDK, with machine identities and short-lived tokens.
+
+### Services, alerts and security
+
+- HTTP, TCP, DNS, TLS and heartbeat checks, incidents, on-call and public status pages.
+- Cloud accounts and costs for DigitalOcean, AWS, Vercel, Contabo and other providers.
+- Alerts by email, WhatsApp, Telegram, Slack, Discord and Mattermost.
+- Invite-only workspaces with owner, admin, member and guest roles, MFA and an audit trail.
+
+### Questions
+
+**Is Space Works Workspace free?**
+Yes. Space Works Workspace is free, open-source software licensed AGPL-3.0-or-later, and it is self-hosted so every record, file and secret stays on infrastructure you control.
+
+**How do I install Space Works Workspace?**
+Run the one-line curl installer on a 64-bit Linux server; a starting estimate is 2 vCPU, 4 GB RAM with swap and 30 GB SSD. A Render Blueprint is also available for cloud hosting.
+
+**Does Space Works Workspace include a secrets manager?**
+Yes. Space Works Workspace stores application secrets by project, environment and folder with envelope encryption, version history and audited reveal, and ships the sww command line and Node SDK.
+
+**Does Space Works Workspace handle Indian compliance and finance?**
+Space Works Workspace tracks PF, ESI, PT and TDS remittances, TDS registers, GST invoices and notes, and 80G and utilisation certificates alongside budgets, funds and payroll records.
+
+**Does Space Works Workspace manage makerspace members?**
+No. Space Works Workspace is for the team that runs the organisation; member-facing work lives in the sibling apps: Space Works for the makerspace, Space Works Events for events and Space Works Organization for memberships.
+
+## Space Works mobile apps
+
+Page: https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/
+Source: https://github.com/SpaceWorks-Labs/SpaceWorks-iOS, https://github.com/SpaceWorks-Labs/SpaceWorks-Android
+Status: In development
+Built with: iOS: SwiftUI, iOS 17+, iPhone and iPad; Android: Kotlin, Jetpack Compose, Material 3, Android 8+ (API 26), targets API 36; both use a generated OpenAPI client
+Licence: AGPL-3.0
+For: makerspace members, makerspace staff
+
+The Space Works mobile apps are open-source native apps for iPhone, iPad and Android, still in development, for makerspace members and staff that connect to a Space Works server for equipment, loans, bookings, events and check-in.
+
+Space Works for iOS is a native SwiftUI app for iPhone and iPad that targets iOS 17 and later. Space Works for Android is a native Kotlin and Jetpack Compose app with Material 3 that runs on Android 8 (API 26) and later. Both are in development with no App Store or Google Play release; Debug builds include a clearly labelled demo, and live payments, push and provider sign-in still need deployment configuration.
+
+Both apps are clients of a Space Works backend through a pinned OpenAPI contract. The iOS app chooses a server on launch or locks one HTTPS origin; the Android README says the backend will be supplied later. The Space Works hub has a Mobile apps module for attested device sessions, native push and the in-app payment sheet.
+
+### For members
+
+- Inventory search, equipment requests, loans and loan renewal.
+- Space bookings, event registration and tickets.
+- A membership card and an inbox for updates.
+- Makerspace switching in the iOS app.
+
+### For staff
+
+- Permission-aware request review on iOS.
+- Issue, return and check-in flows with explicit review and evidence steps.
+- Scanning and evidence entry from the device.
+
+### Accounts and security
+
+- Password, phone, Google, Apple and organisation sign-in, MFA and account recovery on iOS.
+- Devices and sessions, sign out everywhere, data export and account deletion journeys.
+- App Attest and Keychain storage on iOS.
+
+### Native design and accessibility
+
+- iOS adapts to iPhone and iPad layouts with Dynamic Type, Bold Text and Reduce Motion support.
+- Android uses Material 3 with adaptive phone and tablet navigation and accessible text scaling.
+- Light and dark themes and Gilroy typography on both platforms.
+
+### Status and white-labelling
+
+- Both apps are in development, with no App Store or Google Play release yet.
+- Debug builds include a labelled demo to try member and staff flows without a backend.
+- Branding and an optional locked HTTPS server origin are set in branding/brand.json.
+
+### Questions
+
+**Are the Space Works apps on the App Store or Google Play?**
+Not yet. The Space Works iOS and Android apps are in development with no store releases; Android CI release builds are unsigned and Play distribution still needs owner signing.
+
+**Which devices do the Space Works mobile apps support?**
+The Space Works iOS app targets iOS 17 and later on iPhone and iPad. The Space Works Android app runs on Android 8 (API 26) and later, on phones and tablets.
+
+**What do the Space Works mobile apps connect to?**
+The Space Works mobile apps are clients of a Space Works server through a pinned OpenAPI contract. On iOS you choose a server on launch, or a deployment can lock one HTTPS origin.
+
+**Can I try the Space Works mobile apps without a server?**
+Yes, in Debug builds. Both Space Works apps include a clearly labelled, isolated demo of the member and staff flows; Release builds leave it out.
+
+**Can I rebrand the Space Works mobile apps?**
+Yes. Both Space Works apps read deployment branding and an optional locked HTTPS origin from branding/brand.json, and each has a white-label guide.

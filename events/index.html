@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-source event registration &amp; ticketing | Space Works</title>
+  <meta name="description" content="Space Works Events is a free, open-source, self-hosted event platform: registrations, live QR tickets, offline check-in, badges, certificates, no platform fee.">
+  <link rel="canonical" href="https://spaceworks-labs.github.io/SpaceWorks-Website/events/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#FFF4E8">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/Gilroy-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../fonts/Gilroy-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="alternate" type="text/plain" title="LLM summary" href="https://spaceworks-labs.github.io/SpaceWorks-Website/llms.txt">
+  <meta property="og:site_name" content="Space Works">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open-source event registration &amp; ticketing | Space Works">
+  <meta property="og:description" content="Space Works Events is a free, open-source, self-hosted event platform: registrations, live QR tickets, offline check-in, badges, certificates, no platform fee.">
+  <meta property="og:url" content="https://spaceworks-labs.github.io/SpaceWorks-Website/events/">
+  <meta property="og:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Space Works Events: Event registration and ticketing platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open-source event registration &amp; ticketing | Space Works">
+  <meta name="twitter:description" content="Space Works Events is a free, open-source, self-hosted event platform: registrations, live QR tickets, offline check-in, badges, certificates, no platform fee.">
+  <meta name="twitter:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization",
+   "name": "Space Works",
+   "alternateName": [
+    "SpaceWorks",
+    "SpaceWorks Labs"
+   ],
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/assets/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "description": "Free, open-source, self-hosted software for makerspaces, fab labs, tool libraries and communities.",
+   "sameAs": [
+    "https://github.com/SpaceWorks-Labs",
+    "https://spaceworks-labs.github.io/SpaceWorks-Docs/",
+    "https://spaceworks-labs.github.io/SpaceWorks-Design/"
+   ],
+   "founder": {
+    "@type": "Person",
+    "name": "Shaan Shoukath",
+    "url": "https://github.com/Shaan-Shoukath"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "TinkerSpace Kochi",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Kochi",
+     "addressRegion": "Kerala",
+     "addressCountry": "IN"
+    }
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#webpage",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/",
+   "name": "Open-source event registration & ticketing | Space Works",
+   "description": "Space Works Events is a free, open-source, self-hosted event platform: registrations, live QR tickets, offline check-in, badges, certificates, no platform fee.",
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#website"
+   },
+   "about": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#spaceworks-events"
+   },
+   "dateModified": "2026-11-08",
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Space Works",
+     "item": "https://spaceworks-labs.github.io/SpaceWorks-Website/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Events",
+     "item": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/"
+    }
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#spaceworks-events",
+   "name": "Space Works Events",
+   "description": "Space Works Events is a free, open-source, self-hosted event platform for maker and community events that handles event pages, registrations, live QR tickets, door check-in, ID cards, member programmes, feedback and certificates.",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Event registration and ticketing platform",
+   "operatingSystem": "Linux (Docker Compose)",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "downloadUrl": "https://github.com/SpaceWorks-Labs/SpaceWorks-Events",
+   "featureList": [
+    "Event pages in your colours with a cover photo editor, tracks, speakers, venues, sponsors, FAQs and resources.",
+    "Public, hidden-link, invite-only or approval-required events, with an option to list them on Discover.",
+    "Short links like /aB3x9Kq for every event.",
+    "Recurring series, organisation roles and event co-organisers.",
+    "Custom registration forms with ten question types, help text and show-only-if logic.",
+    "Capacity limits, waitlists and approvals, with undo.",
+    "Confirmation emails with a calendar invite, sent through a durable outbox.",
+    "Buyers pay into your own Razorpay or Stripe account, with no platform fee.",
+    "Fixed or pay-what-you-want prices, group tickets, extras, promo and access codes, members-only tickets and series passes.",
+    "Refunds, transfers, pay-at-the-desk, PDF receipts, chargeback alerts and an orders CSV.",
+    "Live QR tickets that tear off their stub on the guest's phone at check-in.",
+    "A check-in desk for QR, search and manual check-in, with undo."
+   ],
+   "keywords": "open source event registration software, self-hosted event ticketing, QR code event check-in app, event badge printing software, community event management platform, member ID card software",
+   "publisher": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#software"
+   },
+   "softwareVersion": "0.12.0"
+  },
+  {
+   "@type": "SoftwareSourceCode",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#source-spaceworks-events",
+   "name": "SpaceWorks-Events",
+   "codeRepository": "https://github.com/SpaceWorks-Labs/SpaceWorks-Events",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "programmingLanguage": [
+    "TypeScript"
+   ],
+   "targetProduct": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#spaceworks-events"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/#faq",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is Space Works Events free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Space Works Events is free, open-source software under the GNU AGPL v3.0 or later, and events are free by default. It has no ads and no third-party trackers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Space Works Events take a cut of ticket sales?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. When you charge for an event, buyers pay on Razorpay's or Stripe's page and the money goes straight to your own account, with no platform fee."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can Space Works Events check people in without internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Space Works Events can download the roster for offline check-in, keep scanning when the venue Wi-Fi drops and sync when you are back online. PIN-locked door stations let volunteers check people in without an account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I install Space Works Events?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Run the one-line curl installer on a 64-bit Linux server; a small instance needs 2 vCPU, 2 GB RAM and 30 GB SSD. An optional cloud setup runs on free plans with Render, Supabase, Upstash, Cloudflare R2 and Brevo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can Space Works Events connect to other systems?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Space Works Events has a tenant-bound machine API (v1) with scoped, rotating credentials for connecting other systems."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="subpage">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="../" aria-label="Space Works home"><img src="../assets/brand/lockup-horizontal.svg" width="360" height="58" alt=""></a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-links">
+          <a href="../#workspace">Product</a>
+          <a href="../#apps">Apps</a>
+          <a href="../#faq">FAQ</a>
+          <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+          <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
+          <a class="nav-start" href="../#install">Get started <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+        <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile"><a href="../#workspace">Product</a><a href="../#apps">Apps</a><a href="../#faq">FAQ</a><a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a><a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a><a href="../#install">Get started</a></nav></details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Space Works</a> <span aria-hidden="true">/</span> <span aria-current="page">Events</span></nav>
+        <p class="eyebrow">Event registration and ticketing platform</p>
+        <h1 id="page-title">Event registration, tickets and check-in</h1>
+        <p class="definition">Space Works Events is a free, open-source, self-hosted event platform for maker and community events that handles event pages, registrations, live QR tickets, door check-in, ID cards, member programmes, feedback and certificates.</p>
+        <p class="para">Space Works Events lets you publish an event page, take registrations, send live QR tickets, check people in at the door, print ID cards, run a member programme and follow up with feedback and certificates, all from one self-hosted app you control. Events are free by default; when you charge, tickets are paid straight to your own Razorpay or Stripe account with no platform fee. There are no ads or third-party trackers, guests&#x27; data stays in your own database, and it is built on Yuyu by Abhiram N J.</p>
+        <div class="actions"><a class="btn btn-solid" href="#install">Get Events <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks-Events">View on GitHub <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="page-section facts-section" aria-labelledby="facts-heading">
+      <div class="wrap">
+        <h2 id="facts-heading" class="sr-only">At a glance</h2>
+        <dl class="facts"><div><dt>What it is</dt><dd>Event registration and ticketing platform</dd></div><div><dt>Status</dt><dd>Released · 0.12.0</dd></div><div><dt>For</dt><dd>makers, communities, event organisers, organisations running member programmes</dd></div><div><dt>Licence</dt><dd>AGPL-3.0-or-later</dd></div><div><dt>Built with</dt><dd>Next.js 16, React, Prisma, PostgreSQL 16, Redis 7, Silo object storage, Caddy, Docker Compose (Node 22); Helm chart for Kubernetes</dd></div><div><dt>Works with</dt><dd>Razorpay, Stripe, Google Sheets</dd></div><div><dt>How it fits</dt><dd>A self-hosted app with its own installer and database, built on Yuyu by Abhiram N J. It connects to other systems through a tenant-bound machine API with scoped, rotating credentials.</dd></div><div><dt>Source code</dt><dd><a href="https://github.com/SpaceWorks-Labs/SpaceWorks-Events">SpaceWorks-Events</a></dd></div></dl>
+      </div>
+    </section>
+
+    <section class="page-section features-section" aria-labelledby="features-heading">
+      <div class="wrap">
+        <div class="modules-head"><div><p class="eyebrow">What you can do</p><h2 id="features-heading">Events, feature by feature.</h2></div></div>
+        <div class="features feature-groups">
+          <article class="feature"><h3>Plan and publish</h3><ul><li>Event pages in your colours with a cover photo editor, tracks, speakers, venues, sponsors, FAQs and resources.</li><li>Public, hidden-link, invite-only or approval-required events, with an option to list them on Discover.</li><li>Short links like /aB3x9Kq for every event.</li><li>Recurring series, organisation roles and event co-organisers.</li></ul></article>
+          <article class="feature"><h3>Registration</h3><ul><li>Custom registration forms with ten question types, help text and show-only-if logic.</li><li>Capacity limits, waitlists and approvals, with undo.</li><li>Confirmation emails with a calendar invite, sent through a durable outbox.</li></ul></article>
+          <article class="feature"><h3>Paid tickets (optional)</h3><ul><li>Buyers pay into your own Razorpay or Stripe account, with no platform fee.</li><li>Fixed or pay-what-you-want prices, group tickets, extras, promo and access codes, members-only tickets and series passes.</li><li>Refunds, transfers, pay-at-the-desk, PDF receipts, chargeback alerts and an orders CSV.</li></ul></article>
+          <article class="feature"><h3>Tickets and the door</h3><ul><li>Live QR tickets that tear off their stub on the guest&#x27;s phone at check-in.</li><li>A check-in desk for QR, search and manual check-in, with undo.</li><li>Offline check-in that keeps scanning when venue Wi-Fi drops and syncs later.</li><li>PIN-locked door stations so volunteers can check people in without an account.</li></ul></article>
+          <article class="feature"><h3>Badges and member IDs</h3><ul><li>Colour ID cards and badges with your logo, the guest&#x27;s check-in QR and chosen registration answers.</li><li>A badge designer with stock sizes such as A6, 4 x 6 in and CR80, and one print-ready PDF.</li><li>Member ID programmes with a join form, CSV or Google Sheet import and approvals.</li><li>A verify QR on every member card that shows Valid, Expired or Revoked.</li></ul></article>
+          <article class="feature"><h3>Follow up and run it safely</h3><ul><li>Broadcasts with 13 starter templates, five email designs, a review step and a five-second undo.</li><li>Feedback forms, a registration funnel in analytics and certificates built on your own artwork.</li><li>Required authenticator-app MFA for organisation staff and a breached-password check.</li><li>No ads and no third-party trackers.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="page-section install-section" aria-labelledby="install-heading">
+      <div class="wrap install-grid">
+        <div><p class="eyebrow">Install</p><h2 id="install-heading">Yours to run.</h2>
+          <p class="para">Free and open source under AGPL-3.0-or-later. Your data stays in your own database.</p></div>
+        <div>
+          <div class="terminal">
+            <div class="terminal-bar"><span>On a Linux server</span><button class="copy" type="button" title="Copies the one-line command" data-copy-text="curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Events/main/install.sh | bash">Copy command</button></div>
+<pre class="transcript code-text"><span class="cmd">$ <code>curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks-Events/main/install.sh | bash</code></span></pre>
+          </div>
+          <p class="stage-note">Run it as a user with sudo. Read the script first: <a href="https://github.com/SpaceWorks-Labs/SpaceWorks-Events/blob/main/install.sh">install.sh</a>.</p><p class="install-alt">Prefer the cloud? <a href="https://render.com/deploy?repo=https://github.com/SpaceWorks-Labs/SpaceWorks-Events">Deploy to Render</a> in one click.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="page-section faq-section" aria-labelledby="faq-heading">
+      <div class="wrap">
+        <div class="modules-head"><div><p class="eyebrow">Questions</p><h2 id="faq-heading">Events, answered.</h2></div></div>
+        <div class="faq-list" aria-labelledby="faq-heading">
+          <details class="faq-item"><summary><h3>Is Space Works Events free?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. Space Works Events is free, open-source software under the GNU AGPL v3.0 or later, and events are free by default. It has no ads and no third-party trackers.</p></details>
+          <details class="faq-item"><summary><h3>Does Space Works Events take a cut of ticket sales?</h3><span class="expand" aria-hidden="true">+</span></summary><p>No. When you charge for an event, buyers pay on Razorpay&#x27;s or Stripe&#x27;s page and the money goes straight to your own account, with no platform fee.</p></details>
+          <details class="faq-item"><summary><h3>Can Space Works Events check people in without internet?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. Space Works Events can download the roster for offline check-in, keep scanning when the venue Wi-Fi drops and sync when you are back online. PIN-locked door stations let volunteers check people in without an account.</p></details>
+          <details class="faq-item"><summary><h3>How do I install Space Works Events?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Run the one-line curl installer on a 64-bit Linux server; a small instance needs 2 vCPU, 2 GB RAM and 30 GB SSD. An optional cloud setup runs on free plans with Render, Supabase, Upstash, Cloudflare R2 and Brevo.</p></details>
+          <details class="faq-item"><summary><h3>Can Space Works Events connect to other systems?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. Space Works Events has a tenant-bound machine API (v1) with scoped, rotating credentials for connecting other systems.</p></details>
+        </div>
+        <p class="more-apps">More from Space Works: <a href="../">the full platform</a><a href="../inventory/">Inventory</a><a href="../machines/">Machines</a><a href="../bookings/">Bookings</a><a href="../organization/">Organization</a><a href="../workspace/">Workspace</a><a href="../mobile/">Mobile apps</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap closing-inner"><div><p class="eyebrow">There’s a place for your next idea.</p><h2 id="closing-heading">Let’s get making.</h2></div><a class="btn btn-solid" href="../#install">Set up your space <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+    <div class="wrap colophon-row">
+      <a class="brand" href="../" aria-label="Space Works home"><img src="../assets/brand/lockup-horizontal.svg" width="360" height="58" alt=""></a>
+      <p class="code-text">0.9.3 · released 8 Nov 2026 · AGPL-3.0 · free software for shared tools</p>
+      <nav aria-label="Apps">
+        <a href="../inventory/">Inventory</a>
+        <a href="../machines/">Machines</a>
+        <a href="../events/">Events</a>
+        <a href="../bookings/">Bookings</a>
+        <a href="../organization/">Organization</a>
+        <a href="../workspace/">Workspace</a>
+        <a href="../mobile/">Mobile apps</a>
+      </nav>
+      <nav aria-label="Project">
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/releases">Releases</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/blob/main/CHANGELOG.md">Changelog</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/install/one-line-install/">Self-hosting</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "q": "What is Space Works?",
+    "a": "Space Works is free, open-source, self-hosted software for makerspaces, fab labs, hackerspaces, tool libraries and the communities around them. The main platform covers inventory and tool lending, machines and 3D printing, events, bookings and memberships in one install. Six standalone apps cover one of those jobs each."
+  },
+  {
+    "q": "Is Space Works free?",
+    "a": "Yes. Every Space Works project is open source under the GNU Affero General Public License v3 (AGPL-3.0). There is no licence fee. You can use, study, modify and share it, including for commercial work, and you pay only for the server you host it on."
+  },
+  {
+    "q": "How do I install Space Works?",
+    "a": "On a Linux server, as a user with sudo, run the one-line installer: curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash. It asks every question first, changes nothing until you confirm, and runs the platform with Docker Compose. The documentation covers manual installs and hosting options."
+  },
+  {
+    "q": "Do I need the whole platform or one app?",
+    "a": "Start with the main Space Works platform if you run a whole makerspace. If you only need one job done, the standalone apps (Inventory, Machines, Events, Bookings, Organization and Workspace) each install on their own with their own database. Running several apps does not automatically combine their accounts or data; they connect through REST APIs and webhooks where supported."
+  },
+  {
+    "q": "Can one installation run several makerspaces?",
+    "a": "Yes. One Space Works server can host many makerspaces, each fully separate with its own members, inventory, roles, settings and audit trail. Networks, universities and chains can link spaces under one organisation with a shared event catalogue."
+  },
+  {
+    "q": "Does Space Works take payments?",
+    "a": "Payments are optional. The main platform supports Stripe or Razorpay checkout; without them, fees and deposits are tracked and settled at the desk. The standalone Events, Bookings, Machines and Organization apps take Razorpay, Stripe or offline payments, and Organization adds UPI and GST receipts for Indian organisations."
+  },
+  {
+    "q": "Is there a mobile app?",
+    "a": "Native iOS (SwiftUI, iOS 17 and later) and Android (Kotlin and Jetpack Compose, Android 8 and later) apps are in development. Both connect to your own Space Works server for equipment, requests, loans, bookings, events and QR workflows."
+  },
+  {
+    "q": "Where is my data stored?",
+    "a": "On your own server. Space Works is self-hosted, so member, inventory and payment records stay in your database. Personal data is encrypted per space, integration secrets are encrypted at rest, and backups are encrypted and signed."
+  },
+  {
+    "q": "Who makes Space Works?",
+    "a": "Space Works was started by Shaan Shoukath at TinkerSpace Kochi, a community makerspace by TinkerHub in Kerala, India, and is built in the open by the Space Works community on GitHub. It runs at TinkerHub Kochi and TinkerHub Calicut, serving more than 1,000 members."
+  }
+]

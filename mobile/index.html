@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-source makerspace apps for iOS &amp; Android | Space Works</title>
+  <meta name="description" content="Space Works mobile apps are open-source iOS and Android apps for makerspace members and staff, in development: equipment, loans, bookings, events, check-in.">
+  <link rel="canonical" href="https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#FFF4E8">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/Gilroy-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../fonts/Gilroy-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="alternate" type="text/plain" title="LLM summary" href="https://spaceworks-labs.github.io/SpaceWorks-Website/llms.txt">
+  <meta property="og:site_name" content="Space Works">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open-source makerspace apps for iOS &amp; Android | Space Works">
+  <meta property="og:description" content="Space Works mobile apps are open-source iOS and Android apps for makerspace members and staff, in development: equipment, loans, bookings, events, check-in.">
+  <meta property="og:url" content="https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/">
+  <meta property="og:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Space Works mobile apps: Makerspace mobile app for iOS and Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open-source makerspace apps for iOS &amp; Android | Space Works">
+  <meta name="twitter:description" content="Space Works mobile apps are open-source iOS and Android apps for makerspace members and staff, in development: equipment, loans, bookings, events, check-in.">
+  <meta name="twitter:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization",
+   "name": "Space Works",
+   "alternateName": [
+    "SpaceWorks",
+    "SpaceWorks Labs"
+   ],
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/assets/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "description": "Free, open-source, self-hosted software for makerspaces, fab labs, tool libraries and communities.",
+   "sameAs": [
+    "https://github.com/SpaceWorks-Labs",
+    "https://spaceworks-labs.github.io/SpaceWorks-Docs/",
+    "https://spaceworks-labs.github.io/SpaceWorks-Design/"
+   ],
+   "founder": {
+    "@type": "Person",
+    "name": "Shaan Shoukath",
+    "url": "https://github.com/Shaan-Shoukath"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "TinkerSpace Kochi",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Kochi",
+     "addressRegion": "Kerala",
+     "addressCountry": "IN"
+    }
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#webpage",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/",
+   "name": "Open-source makerspace apps for iOS & Android | Space Works",
+   "description": "Space Works mobile apps are open-source iOS and Android apps for makerspace members and staff, in development: equipment, loans, bookings, events, check-in.",
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#website"
+   },
+   "about": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#spaceworks-ios"
+   },
+   "dateModified": "2026-11-08",
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Space Works",
+     "item": "https://spaceworks-labs.github.io/SpaceWorks-Website/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Mobile apps",
+     "item": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/"
+    }
+   ]
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#spaceworks-ios",
+   "name": "Space Works for iOS",
+   "description": "The Space Works mobile apps are open-source native apps for iPhone, iPad and Android, still in development, for makerspace members and staff that connect to a Space Works server for equipment, loans, bookings, events and check-in.",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Makerspace mobile app for iOS and Android",
+   "operatingSystem": "iOS 17 or later",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "downloadUrl": "https://github.com/SpaceWorks-Labs/SpaceWorks-iOS",
+   "featureList": [
+    "Inventory search, equipment requests, loans and loan renewal.",
+    "Space bookings, event registration and tickets.",
+    "A membership card and an inbox for updates.",
+    "Makerspace switching in the iOS app.",
+    "Permission-aware request review on iOS.",
+    "Issue, return and check-in flows with explicit review and evidence steps.",
+    "Scanning and evidence entry from the device.",
+    "Password, phone, Google, Apple and organisation sign-in, MFA and account recovery on iOS.",
+    "Devices and sessions, sign out everywhere, data export and account deletion journeys.",
+    "App Attest and Keychain storage on iOS.",
+    "iOS adapts to iPhone and iPad layouts with Dynamic Type, Bold Text and Reduce Motion support.",
+    "Android uses Material 3 with adaptive phone and tablet navigation and accessible text scaling."
+   ],
+   "keywords": "makerspace app for iPhone, makerspace app for Android, open source makerspace mobile app, tool lending app for members, makerspace staff check-in app",
+   "publisher": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#software"
+   }
+  },
+  {
+   "@type": "SoftwareSourceCode",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#source-spaceworks-ios",
+   "name": "SpaceWorks-iOS",
+   "codeRepository": "https://github.com/SpaceWorks-Labs/SpaceWorks-iOS",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "programmingLanguage": [
+    "Swift",
+    "Kotlin"
+   ],
+   "targetProduct": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#spaceworks-ios"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#spaceworks-android",
+   "name": "Space Works for Android",
+   "description": "The Space Works mobile apps are open-source native apps for iPhone, iPad and Android, still in development, for makerspace members and staff that connect to a Space Works server for equipment, loans, bookings, events and check-in.",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Makerspace mobile app for iOS and Android",
+   "operatingSystem": "Android 8 or later",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "downloadUrl": "https://github.com/SpaceWorks-Labs/SpaceWorks-Android",
+   "featureList": [
+    "Inventory search, equipment requests, loans and loan renewal.",
+    "Space bookings, event registration and tickets.",
+    "A membership card and an inbox for updates.",
+    "Makerspace switching in the iOS app.",
+    "Permission-aware request review on iOS.",
+    "Issue, return and check-in flows with explicit review and evidence steps.",
+    "Scanning and evidence entry from the device.",
+    "Password, phone, Google, Apple and organisation sign-in, MFA and account recovery on iOS.",
+    "Devices and sessions, sign out everywhere, data export and account deletion journeys.",
+    "App Attest and Keychain storage on iOS.",
+    "iOS adapts to iPhone and iPad layouts with Dynamic Type, Bold Text and Reduce Motion support.",
+    "Android uses Material 3 with adaptive phone and tablet navigation and accessible text scaling."
+   ],
+   "keywords": "makerspace app for iPhone, makerspace app for Android, open source makerspace mobile app, tool lending app for members, makerspace staff check-in app",
+   "publisher": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#software"
+   }
+  },
+  {
+   "@type": "SoftwareSourceCode",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#source-spaceworks-android",
+   "name": "SpaceWorks-Android",
+   "codeRepository": "https://github.com/SpaceWorks-Labs/SpaceWorks-Android",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "programmingLanguage": [
+    "Swift",
+    "Kotlin"
+   ],
+   "targetProduct": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#spaceworks-android"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/#faq",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Are the Space Works apps on the App Store or Google Play?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not yet. The Space Works iOS and Android apps are in development with no store releases; Android CI release builds are unsigned and Play distribution still needs owner signing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which devices do the Space Works mobile apps support?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Space Works iOS app targets iOS 17 and later on iPhone and iPad. The Space Works Android app runs on Android 8 (API 26) and later, on phones and tablets."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do the Space Works mobile apps connect to?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The Space Works mobile apps are clients of a Space Works server through a pinned OpenAPI contract. On iOS you choose a server on launch, or a deployment can lock one HTTPS origin."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I try the Space Works mobile apps without a server?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, in Debug builds. Both Space Works apps include a clearly labelled, isolated demo of the member and staff flows; Release builds leave it out."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I rebrand the Space Works mobile apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Both Space Works apps read deployment branding and an optional locked HTTPS origin from branding/brand.json, and each has a white-label guide."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="subpage">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="../" aria-label="Space Works home"><img src="../assets/brand/lockup-horizontal.svg" width="360" height="58" alt=""></a>
+      <nav class="nav" aria-label="Main">
+        <div class="nav-links">
+          <a href="../#workspace">Product</a>
+          <a href="../#apps">Apps</a>
+          <a href="../#faq">FAQ</a>
+          <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+          <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
+          <a class="nav-start" href="../#install">Get started <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+        <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile"><a href="../#workspace">Product</a><a href="../#apps">Apps</a><a href="../#faq">FAQ</a><a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a><a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a><a href="../#install">Get started</a></nav></details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Space Works</a> <span aria-hidden="true">/</span> <span aria-current="page">Mobile apps</span></nav>
+        <p class="eyebrow">Makerspace mobile app for iOS and Android</p>
+        <h1 id="page-title">Space Works apps for iOS and Android</h1>
+        <p class="definition">The Space Works mobile apps are open-source native apps for iPhone, iPad and Android, still in development, for makerspace members and staff that connect to a Space Works server for equipment, loans, bookings, events and check-in.</p>
+        <p class="para">Space Works for iOS is a native SwiftUI app for iPhone and iPad that targets iOS 17 and later. Space Works for Android is a native Kotlin and Jetpack Compose app with Material 3 that runs on Android 8 (API 26) and later. Both are in development with no App Store or Google Play release; Debug builds include a clearly labelled demo, and live payments, push and provider sign-in still need deployment configuration.</p>
+        <div class="actions"><a class="btn btn-solid" href="#install">Follow the apps <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks-iOS">View on GitHub <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="page-section facts-section" aria-labelledby="facts-heading">
+      <div class="wrap">
+        <h2 id="facts-heading" class="sr-only">At a glance</h2>
+        <dl class="facts"><div><dt>What it is</dt><dd>Makerspace mobile app for iOS and Android</dd></div><div><dt>Status</dt><dd>In development</dd></div><div><dt>For</dt><dd>makerspace members, makerspace staff</dd></div><div><dt>Licence</dt><dd>AGPL-3.0</dd></div><div><dt>Built with</dt><dd>iOS: SwiftUI, iOS 17+, iPhone and iPad; Android: Kotlin, Jetpack Compose, Material 3, Android 8+ (API 26), targets API 36; both use a generated OpenAPI client</dd></div><div><dt>Works with</dt><dd>Stripe, Razorpay, Google sign-in, Apple sign-in</dd></div><div><dt>How it fits</dt><dd>Both apps are clients of a Space Works backend through a pinned OpenAPI contract. The iOS app chooses a server on launch or locks one HTTPS origin; the Android README says the backend will be supplied later. The Space Works hub has a Mobile apps module for attested device sessions, native push and the in-app payment sheet.</dd></div><div><dt>Source code</dt><dd><a href="https://github.com/SpaceWorks-Labs/SpaceWorks-iOS">SpaceWorks-iOS</a> · <a href="https://github.com/SpaceWorks-Labs/SpaceWorks-Android">SpaceWorks-Android</a></dd></div></dl>
+      </div>
+    </section>
+
+    <section class="page-section features-section" aria-labelledby="features-heading">
+      <div class="wrap">
+        <div class="modules-head"><div><p class="eyebrow">What you can do</p><h2 id="features-heading">Mobile apps, feature by feature.</h2></div></div>
+        <div class="features feature-groups">
+          <article class="feature"><h3>For members</h3><ul><li>Inventory search, equipment requests, loans and loan renewal.</li><li>Space bookings, event registration and tickets.</li><li>A membership card and an inbox for updates.</li><li>Makerspace switching in the iOS app.</li></ul></article>
+          <article class="feature"><h3>For staff</h3><ul><li>Permission-aware request review on iOS.</li><li>Issue, return and check-in flows with explicit review and evidence steps.</li><li>Scanning and evidence entry from the device.</li></ul></article>
+          <article class="feature"><h3>Accounts and security</h3><ul><li>Password, phone, Google, Apple and organisation sign-in, MFA and account recovery on iOS.</li><li>Devices and sessions, sign out everywhere, data export and account deletion journeys.</li><li>App Attest and Keychain storage on iOS.</li></ul></article>
+          <article class="feature"><h3>Native design and accessibility</h3><ul><li>iOS adapts to iPhone and iPad layouts with Dynamic Type, Bold Text and Reduce Motion support.</li><li>Android uses Material 3 with adaptive phone and tablet navigation and accessible text scaling.</li><li>Light and dark themes and Gilroy typography on both platforms.</li></ul></article>
+          <article class="feature"><h3>Status and white-labelling</h3><ul><li>Both apps are in development, with no App Store or Google Play release yet.</li><li>Debug builds include a labelled demo to try member and staff flows without a backend.</li><li>Branding and an optional locked HTTPS server origin are set in branding/brand.json.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="page-section install-section" aria-labelledby="install-heading">
+      <div class="wrap install-grid">
+        <div><p class="eyebrow">Install</p><h2 id="install-heading">Yours to run.</h2>
+          <p class="para">Free and open source under AGPL-3.0. Your data stays in your own database.</p></div>
+        <div>
+          <p class="para">Builds from source; there are no store releases yet. Follow along on <a href="https://github.com/SpaceWorks-Labs/SpaceWorks-iOS">SpaceWorks-iOS</a> and <a href="https://github.com/SpaceWorks-Labs/SpaceWorks-Android">SpaceWorks-Android</a>, and point the app at your own <a href="../">Space Works</a> server.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="page-section faq-section" aria-labelledby="faq-heading">
+      <div class="wrap">
+        <div class="modules-head"><div><p class="eyebrow">Questions</p><h2 id="faq-heading">Mobile apps, answered.</h2></div></div>
+        <div class="faq-list" aria-labelledby="faq-heading">
+          <details class="faq-item"><summary><h3>Are the Space Works apps on the App Store or Google Play?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Not yet. The Space Works iOS and Android apps are in development with no store releases; Android CI release builds are unsigned and Play distribution still needs owner signing.</p></details>
+          <details class="faq-item"><summary><h3>Which devices do the Space Works mobile apps support?</h3><span class="expand" aria-hidden="true">+</span></summary><p>The Space Works iOS app targets iOS 17 and later on iPhone and iPad. The Space Works Android app runs on Android 8 (API 26) and later, on phones and tablets.</p></details>
+          <details class="faq-item"><summary><h3>What do the Space Works mobile apps connect to?</h3><span class="expand" aria-hidden="true">+</span></summary><p>The Space Works mobile apps are clients of a Space Works server through a pinned OpenAPI contract. On iOS you choose a server on launch, or a deployment can lock one HTTPS origin.</p></details>
+          <details class="faq-item"><summary><h3>Can I try the Space Works mobile apps without a server?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes, in Debug builds. Both Space Works apps include a clearly labelled, isolated demo of the member and staff flows; Release builds leave it out.</p></details>
+          <details class="faq-item"><summary><h3>Can I rebrand the Space Works mobile apps?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. Both Space Works apps read deployment branding and an optional locked HTTPS origin from branding/brand.json, and each has a white-label guide.</p></details>
+        </div>
+        <p class="more-apps">More from Space Works: <a href="../">the full platform</a><a href="../inventory/">Inventory</a><a href="../machines/">Machines</a><a href="../events/">Events</a><a href="../bookings/">Bookings</a><a href="../organization/">Organization</a><a href="../workspace/">Workspace</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap closing-inner"><div><p class="eyebrow">There’s a place for your next idea.</p><h2 id="closing-heading">Let’s get making.</h2></div><a class="btn btn-solid" href="../#install">Set up your space <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+    <div class="wrap colophon-row">
+      <a class="brand" href="../" aria-label="Space Works home"><img src="../assets/brand/lockup-horizontal.svg" width="360" height="58" alt=""></a>
+      <p class="code-text">0.9.3 · released 8 Nov 2026 · AGPL-3.0 · free software for shared tools</p>
+      <nav aria-label="Apps">
+        <a href="../inventory/">Inventory</a>
+        <a href="../machines/">Machines</a>
+        <a href="../events/">Events</a>
+        <a href="../bookings/">Bookings</a>
+        <a href="../organization/">Organization</a>
+        <a href="../workspace/">Workspace</a>
+        <a href="../mobile/">Mobile apps</a>
+      </nav>
+      <nav aria-label="Project">
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/releases">Releases</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/blob/main/CHANGELOG.md">Changelog</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/install/one-line-install/">Self-hosting</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../site.js" defer></script>
+</body>
+</html>

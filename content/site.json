@@ -1,0 +1,25 @@
+{
+  "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+  "name": "Space Works",
+  "updated": "2026-11-08",
+  "org": "https://github.com/SpaceWorks-Labs",
+  "docs": "https://spaceworks-labs.github.io/SpaceWorks-Docs/",
+  "design": "https://spaceworks-labs.github.io/SpaceWorks-Design/",
+  "hub": {
+    "repo": "SpaceWorks",
+    "version": "0.9.3",
+    "released": "2026-11-08",
+    "install": "curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash",
+    "stack": "Django, Django REST Framework, React, TypeScript, PostgreSQL, Redis, Celery, S3-compatible storage, Docker Compose",
+    "definition": "Space Works is free, open-source, self-hosted management software for makerspaces, fab labs, hackerspaces and tool libraries. One install covers inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships, for one space or many.",
+    "features": [
+      "Public catalogue, borrow requests and QR check-out with photo evidence at every handover",
+      "Machine registry, certifications, service queue and 3D-printing requests with filament tracking",
+      "Events with registration, waitlists, offline QR check-in, badges and certificates",
+      "Bookable rooms and resources with recurring slots and calendar feeds",
+      "Personal accounts, membership plans and renewals, optional Stripe or Razorpay payments",
+      "Many makerspaces on one server, roles you define, an append-only audit log",
+      "Encrypted, signed backups and updates from GitHub releases with automatic rollback"
+    ]
+  }
+}

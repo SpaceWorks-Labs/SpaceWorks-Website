@@ -1,0 +1,34 @@
+# Space Works
+
+> Space Works is free, open-source, self-hosted management software for makerspaces, fab labs, hackerspaces and tool libraries. One install covers inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships, for one space or many. Every project is open source under AGPL-3.0 and built by the Space Works community on GitHub (SpaceWorks-Labs).
+
+Space Works started at TinkerSpace Kochi (TinkerHub, Kerala, India) and runs at TinkerHub Kochi and TinkerHub Calicut for more than 1,000 members. Install the main platform on a Linux server with `curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash`.
+
+## Main platform
+
+- [Space Works platform](https://spaceworks-labs.github.io/SpaceWorks-Website/): 0.9.3, released 2026-11-08. Public catalogue, borrow requests and QR check-out with photo evidence at every handover; Machine registry, certifications, service queue and 3D-printing requests with filament tracking; Events with registration, waitlists, offline QR check-in, badges and certificates; Bookable rooms and resources with recurring slots and calendar feeds; Personal accounts, membership plans and renewals, optional Stripe or Razorpay payments; Many makerspaces on one server, roles you define, an append-only audit log; Encrypted, signed backups and updates from GitHub releases with automatic rollback.
+- [Source code](https://github.com/SpaceWorks-Labs/SpaceWorks): Django, Django REST Framework, React, TypeScript, PostgreSQL, Redis, Celery, S3-compatible storage, Docker Compose.
+- [Documentation](https://spaceworks-labs.github.io/SpaceWorks-Docs/): install, self-hosting, configuration, staff guides and API reference.
+
+## Standalone apps
+
+- [Space Works Inventory](https://spaceworks-labs.github.io/SpaceWorks-Website/inventory/): A stock room and lending desk: catalogue, QR labels, photo-evidence loans, stock counts and transfers between spaces.
+- [Space Works Machines](https://spaceworks-labs.github.io/SpaceWorks-Website/machines/): 3D printers, laser cutters and CNC: job requests with a fair queue, pricing and payments, consumables, repairs and maintenance.
+- [Space Works Events](https://spaceworks-labs.github.io/SpaceWorks-Website/events/): Event pages, registration, free or paid tickets, live QR tickets, offline check-in, badges, feedback and certificates.
+- [Space Works Bookings](https://spaceworks-labs.github.io/SpaceWorks-Website/bookings/): Rooms, studios, desks and halls: live availability, approvals, check-in, payments and cancellation policies.
+- [Space Works Organization](https://spaceworks-labs.github.io/SpaceWorks-Website/organization/): Memberships for clubs, associations and alumni bodies: join forms, renewals, UPI and online fees, GST receipts and member cards.
+- [Space Works Workspace](https://spaceworks-labs.github.io/SpaceWorks-Website/workspace/): The internal tool for the team running the space: projects and kanban, chat, docs, finance, people, governance and secrets.
+- [Space Works mobile apps](https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/): Native iPhone, iPad and Android apps for members and staff: equipment, loans, bookings, events and QR check-in.
+
+## Common questions
+
+- What is Space Works? Space Works is free, open-source, self-hosted software for makerspaces, fab labs, hackerspaces, tool libraries and the communities around them. The main platform covers inventory and tool lending, machines and 3D printing, events, bookings and memberships in one install. Six standalone apps cover one of those jobs each.
+- Is Space Works free? Yes. Every Space Works project is open source under the GNU Affero General Public License v3 (AGPL-3.0). There is no licence fee. You can use, study, modify and share it, including for commercial work, and you pay only for the server you host it on.
+- How do I install Space Works? On a Linux server, as a user with sudo, run the one-line installer: curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash. It asks every question first, changes nothing until you confirm, and runs the platform with Docker Compose. The documentation covers manual installs and hosting options.
+- Do I need the whole platform or one app? Start with the main Space Works platform if you run a whole makerspace. If you only need one job done, the standalone apps (Inventory, Machines, Events, Bookings, Organization and Workspace) each install on their own with their own database. Running several apps does not automatically combine their accounts or data; they connect through REST APIs and webhooks where supported.
+
+## Optional
+
+- [Full product facts](https://spaceworks-labs.github.io/SpaceWorks-Website/llms-full.txt): every app's features, install commands and answers in one file.
+- [Design system](https://spaceworks-labs.github.io/SpaceWorks-Design/): brand guidelines, logos, tokens and UX specs.
+- [GitHub organisation](https://github.com/SpaceWorks-Labs): all repositories.

@@ -3,23 +3,269 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Space Works — Your makerspace. In working order.</title>
-  <meta name="description" content="Free, self-hosted software for makerspaces and tool libraries. Every handover is scanned, photographed and kept on a record nobody can quietly edit.">
+  <title>Space Works — Open-source makerspace management software</title>
+  <meta name="description" content="Free, open-source, self-hosted makerspace software: inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships.">
+  <link rel="canonical" href="https://spaceworks-labs.github.io/SpaceWorks-Website/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#FFF4E8">
+  <meta name="color-scheme" content="light">
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="fonts/Gilroy-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Gilroy-SemiBold.woff" as="font" type="font/woff" crossorigin>
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta property="og:title" content="Space Works — Your makerspace. In working order.">
-  <meta property="og:description" content="A place for every tool, part and possibility. Free, self-hosted software for makerspaces and tool libraries.">
+  <link rel="alternate" type="text/plain" title="LLM summary" href="https://spaceworks-labs.github.io/SpaceWorks-Website/llms.txt">
+  <meta property="og:site_name" content="Space Works">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-1200x630.png">
+  <meta property="og:title" content="Space Works — Open-source makerspace management software">
+  <meta property="og:description" content="Free, open-source, self-hosted makerspace software: inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships.">
+  <meta property="og:url" content="https://spaceworks-labs.github.io/SpaceWorks-Website/">
+  <meta property="og:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Space Works open-box logo on a warm cream background">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="color-scheme" content="light">
+  <meta name="twitter:title" content="Space Works — Open-source makerspace management software">
+  <meta name="twitter:description" content="Free, open-source, self-hosted makerspace software: inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships.">
+  <meta name="twitter:image" content="https://spaceworks-labs.github.io/SpaceWorks-Website/assets/og-1200x630.png">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization",
+   "name": "Space Works",
+   "alternateName": [
+    "SpaceWorks",
+    "SpaceWorks Labs"
+   ],
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/assets/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "description": "Free, open-source, self-hosted software for makerspaces, fab labs, tool libraries and communities.",
+   "sameAs": [
+    "https://github.com/SpaceWorks-Labs",
+    "https://spaceworks-labs.github.io/SpaceWorks-Docs/",
+    "https://spaceworks-labs.github.io/SpaceWorks-Design/"
+   ],
+   "founder": {
+    "@type": "Person",
+    "name": "Shaan Shoukath",
+    "url": "https://github.com/Shaan-Shoukath"
+   },
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "TinkerSpace Kochi",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Kochi",
+     "addressRegion": "Kerala",
+     "addressCountry": "IN"
+    }
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#website",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "name": "Space Works",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#webpage",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "name": "Space Works — Open-source makerspace management software",
+   "description": "Free, open-source, self-hosted makerspace software: inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships.",
+   "isPartOf": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#website"
+   },
+   "about": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#software"
+   },
+   "dateModified": "2026-11-08",
+   "inLanguage": "en"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#software",
+   "name": "Space Works",
+   "description": "Space Works is free, open-source, self-hosted management software for makerspaces, fab labs, hackerspaces and tool libraries. One install covers inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships, for one space or many.",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Makerspace management software",
+   "operatingSystem": "Linux (Docker Compose)",
+   "softwareVersion": "0.9.3",
+   "datePublished": "2026-11-08",
+   "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "downloadUrl": "https://github.com/SpaceWorks-Labs/SpaceWorks",
+   "installUrl": "https://spaceworks-labs.github.io/SpaceWorks-Docs/install/one-line-install/",
+   "softwareHelp": {
+    "@type": "CreativeWork",
+    "url": "https://spaceworks-labs.github.io/SpaceWorks-Docs/"
+   },
+   "featureList": [
+    "Public catalogue, borrow requests and QR check-out with photo evidence at every handover",
+    "Machine registry, certifications, service queue and 3D-printing requests with filament tracking",
+    "Events with registration, waitlists, offline QR check-in, badges and certificates",
+    "Bookable rooms and resources with recurring slots and calendar feeds",
+    "Personal accounts, membership plans and renewals, optional Stripe or Razorpay payments",
+    "Many makerspaces on one server, roles you define, an append-only audit log",
+    "Encrypted, signed backups and updates from GitHub releases with automatic rollback"
+   ],
+   "publisher": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   },
+   "author": {
+    "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#organization"
+   }
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#apps",
+   "name": "Space Works standalone apps",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Space Works Inventory",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/inventory/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Space Works Machines",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/machines/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Space Works Events",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/events/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Space Works Bookings",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/bookings/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Space Works Organization",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/organization/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "Space Works Workspace",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/workspace/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "name": "Space Works mobile apps",
+     "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/mobile/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://spaceworks-labs.github.io/SpaceWorks-Website/#faq",
+   "url": "https://spaceworks-labs.github.io/SpaceWorks-Website/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Space Works?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Space Works is free, open-source, self-hosted software for makerspaces, fab labs, hackerspaces, tool libraries and the communities around them. The main platform covers inventory and tool lending, machines and 3D printing, events, bookings and memberships in one install. Six standalone apps cover one of those jobs each."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Space Works free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Every Space Works project is open source under the GNU Affero General Public License v3 (AGPL-3.0). There is no licence fee. You can use, study, modify and share it, including for commercial work, and you pay only for the server you host it on."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I install Space Works?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On a Linux server, as a user with sudo, run the one-line installer: curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash. It asks every question first, changes nothing until you confirm, and runs the platform with Docker Compose. The documentation covers manual installs and hosting options."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need the whole platform or one app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with the main Space Works platform if you run a whole makerspace. If you only need one job done, the standalone apps (Inventory, Machines, Events, Bookings, Organization and Workspace) each install on their own with their own database. Running several apps does not automatically combine their accounts or data; they connect through REST APIs and webhooks where supported."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can one installation run several makerspaces?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. One Space Works server can host many makerspaces, each fully separate with its own members, inventory, roles, settings and audit trail. Networks, universities and chains can link spaces under one organisation with a shared event catalogue."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Space Works take payments?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Payments are optional. The main platform supports Stripe or Razorpay checkout; without them, fees and deposits are tracked and settled at the desk. The standalone Events, Bookings, Machines and Organization apps take Razorpay, Stripe or offline payments, and Organization adds UPI and GST receipts for Indian organisations."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a mobile app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Native iOS (SwiftUI, iOS 17 and later) and Android (Kotlin and Jetpack Compose, Android 8 and later) apps are in development. Both connect to your own Space Works server for equipment, requests, loans, bookings, events and QR workflows."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is my data stored?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On your own server. Space Works is self-hosted, so member, inventory and payment records stay in your database. Personal data is encrypted per space, integration secrets are encrypted at rest, and backups are encrypted and signed."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who makes Space Works?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Space Works was started by Shaan Shoukath at TinkerSpace Kochi, a community makerspace by TinkerHub in Kerala, India, and is built in the open by the Space Works community on GitHub. It runs at TinkerHub Kochi and TinkerHub Calicut, serving more than 1,000 members."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,12 +276,13 @@
       <nav class="nav" aria-label="Main">
         <div class="nav-links">
           <a href="#workspace">Product</a>
-          <a href="#ecosystem">Ecosystem</a>
-          <a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/">Docs</a>
-          <a href="https://github.com/SpaceWorks-HQ/SpaceWorks">GitHub</a>
+          <a href="#apps">Apps</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+          <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
           <a class="nav-start" href="#install">Get started <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
         </div>
-        <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile"><a href="#workspace">Product</a><a href="#ecosystem">Ecosystem</a><a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/">Docs</a><a href="https://github.com/SpaceWorks-HQ/SpaceWorks">GitHub</a><a href="#install">Get started</a></nav></details>
+        <details class="mobile-menu"><summary>Menu</summary><nav aria-label="Mobile"><a href="#workspace">Product</a><a href="#apps">Apps</a><a href="#faq">FAQ</a><a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a><a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a><a href="#install">Get started</a></nav></details>
       </nav>
     </div>
   </header>
@@ -52,7 +299,7 @@
           <p class="lede">Keep track of your tools and parts, manage borrowing,<br class="desktop-break"> and give everything in your space a place.</p>
           <div class="actions">
             <a class="btn btn-solid" href="#install">Get started <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-            <a class="text-link" href="https://github.com/SpaceWorks-HQ/SpaceWorks">View on GitHub <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+            <a class="text-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks">View on GitHub <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           </div>
           <p class="hero-note">Free to use. Self-hosted. Yours to build on.</p>
         </div>
@@ -104,8 +351,8 @@
       <div class="wrap deployments-inner">
         <h2 id="deployments-heading">Deployed at</h2>
         <ul class="deployment-locations">
-          <li><a href="https://tinkerhub.org/tinkerspace"><span class="deployment-brand"><img src="assets/deployments/tinkerspace.png" width="7844" height="1548" alt="TinkerSpace by TinkerHub" loading="lazy"></span><span class="deployment-name">TinkerHub Kochi</span></a></li>
-          <li><a href="https://tinkerhub.org/tinkerspace"><span class="deployment-brand"><img src="assets/deployments/tinkerspace.png" width="7844" height="1548" alt="TinkerSpace by TinkerHub" loading="lazy"></span><span class="deployment-name">TinkerHub Calicut</span></a></li>
+          <li><a href="https://tinkerhub.org/tinkerspace"><span class="deployment-brand"><img src="assets/deployments/tinkerspace.png" width="960" height="189" alt="TinkerSpace by TinkerHub" loading="lazy"></span><span class="deployment-name">TinkerHub Kochi</span></a></li>
+          <li><a href="https://tinkerhub.org/tinkerspace"><span class="deployment-brand"><img src="assets/deployments/tinkerspace.png" width="960" height="189" alt="TinkerSpace by TinkerHub" loading="lazy"></span><span class="deployment-name">TinkerHub Calicut</span></a></li>
         </ul>
         <p class="deployment-metric"><strong>1,000+</strong><span>members using Space Works</span></p>
       </div>
@@ -135,7 +382,7 @@
               <div class="rbody"><strong>Issued</strong>
                 <div class="evidence">
                   <span class="qr-label" aria-label="Box 3B QR label">
-                    <svg viewBox="0 0 41 41" shape-rendering="crispEdges" aria-hidden="true"><path d="M4 4.5h7m3 0h1m3 0h3m1 0h2m2 0h2m2 0h7M4 5.5h1m5 0h1m1 0h3m1 0h2m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m8 0h2m3 0h1m5 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m2 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m12 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m4 0h4m2 0h1m8 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 11.5h1m1 0h4m1 0h3m1 0h2m2 0h1M4 12.5h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h3m4 0h1m2 0h1M8 13.5h1m2 0h2m1 0h1m5 0h1m3 0h1m3 0h4M4 14.5h1m3 0h3m1 0h1m3 0h2m3 0h1m3 0h1m2 0h4m2 0h3M4 15.5h1m2 0h3m1 0h3m2 0h1m10 0h1m2 0h1m1 0h1m3 0h1M4 16.5h1m1 0h1m1 0h1m1 0h2m1 0h4m2 0h1m7 0h7m1 0h1M7 17.5h1m1 0h1m3 0h1m5 0h1m1 0h1m1 0h1m3 0h1m1 0h2m2 0h1m2 0h1M6 18.5h1m1 0h1m1 0h6m1 0h1m3 0h2m2 0h1m3 0h1m1 0h3m1 0h2M4 19.5h3m4 0h3m1 0h2m1 0h2m1 0h3m1 0h1m4 0h1m4 0h1M4 20.5h3m3 0h2m1 0h2m1 0h1m1 0h1m1 0h2m3 0h1m2 0h3m2 0h1M7 21.5h2m2 0h1m1 0h1m1 0h4m1 0h2m1 0h3m2 0h4m3 0h2M4 22.5h1m1 0h2m2 0h2m5 0h2m1 0h1m1 0h1m3 0h1m1 0h2m4 0h1m1 0h1M6 23.5h4m1 0h3m1 0h3m3 0h2m1 0h5m1 0h3M4 24.5h1m1 0h1m2 0h3m2 0h1m1 0h1m3 0h1m1 0h3m1 0h1m2 0h2m2 0h1m2 0h1M7 25.5h1m4 0h3m1 0h1m1 0h9m1 0h1m1 0h1m2 0h1m1 0h2M4 26.5h1m2 0h1m1 0h5m2 0h1m1 0h3m2 0h4m2 0h3m2 0h3M5 27.5h3m1 0h1m1 0h1m2 0h2m1 0h1m2 0h3m1 0h3m3 0h2m4 0h1M4 28.5h1m2 0h1m1 0h4m2 0h2m1 0h2m3 0h3m1 0h6M12 29.5h6m2 0h1m1 0h1m5 0h1m3 0h2M4 30.5h7m4 0h2m4 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h3M4 31.5h1m5 0h1m2 0h3m1 0h2m1 0h1m2 0h2m3 0h1m3 0h1m2 0h1M4 32.5h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m3 0h1m4 0h6M4 33.5h1m1 0h3m1 0h1m4 0h3m1 0h1m1 0h1m1 0h1m8 0h2m1 0h2M4 34.5h1m1 0h3m1 0h1m1 0h1m2 0h1m5 0h1m3 0h1m6 0h3m1 0h1M4 35.5h1m5 0h1m3 0h2m1 0h1m1 0h1m1 0h3m1 0h5m2 0h1m2 0h1M4 36.5h7m1 0h1m2 0h1m1 0h2m1 0h2m2 0h2m1 0h2m3 0h1m2 0h2" stroke="currentColor" fill="none"/></svg>
+                    <svg viewBox="0 0 41 41" shape-rendering="crispEdges" aria-hidden="true"><path d="M4 4.5h7m2 0h3m2 0h3m1 0h2m2 0h2m2 0h7M4 5.5h1m5 0h1m1 0h1m1 0h4m1 0h3m1 0h1m3 0h2m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h1m5 0h2m3 0h1m5 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h1m1 0h4m8 0h2m2 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m2 0h2m1 0h3m2 0h1m5 0h2m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M16 11.5h3m1 0h3m1 0h2M4 12.5h1m1 0h1m1 0h1m1 0h1m2 0h1m5 0h1m1 0h1m1 0h1m1 0h3m4 0h1m2 0h1M5 13.5h1m2 0h1m2 0h1m2 0h1m5 0h1m3 0h1m3 0h4m4 0h1M4 14.5h1m3 0h1m1 0h1m2 0h2m1 0h2m3 0h1m3 0h1m2 0h1m1 0h2m2 0h3M4 15.5h4m6 0h3m10 0h1m2 0h1m1 0h1m2 0h2M5 16.5h1m1 0h4m3 0h1m1 0h1m2 0h1m7 0h4m2 0h1m2 0h1M4 17.5h1m3 0h2m5 0h1m3 0h1m1 0h1m1 0h1m4 0h3m2 0h1m2 0h1M6 18.5h1m3 0h2m2 0h1m1 0h1m1 0h1m2 0h2m2 0h1m2 0h2m1 0h3m1 0h2M4 19.5h3m4 0h1m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m4 0h2m1 0h1m1 0h1M4 20.5h1m1 0h1m2 0h4m3 0h1m3 0h2m3 0h1m2 0h3M4 21.5h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h2m1 0h2m1 0h3m2 0h4m3 0h2M5 22.5h2m3 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m3 0h1m1 0h3m3 0h3M7 23.5h1m3 0h3m1 0h3m3 0h2m1 0h5m2 0h2M4 24.5h1m1 0h1m3 0h2m1 0h3m4 0h1m1 0h3m1 0h1m2 0h2m2 0h1m2 0h1M5 25.5h1m2 0h1m2 0h2m1 0h1m1 0h1m2 0h8m1 0h1m5 0h3M4 26.5h1m1 0h2m1 0h3m1 0h1m1 0h6m2 0h4m2 0h2m1 0h2m1 0h2M5 27.5h1m1 0h1m1 0h1m5 0h4m1 0h3m1 0h3m1 0h1m1 0h2M4 28.5h1m2 0h1m1 0h2m1 0h3m2 0h1m1 0h1m3 0h3m1 0h9M12 29.5h2m1 0h2m3 0h1m1 0h1m5 0h1m3 0h2m1 0h2M4 30.5h7m5 0h2m3 0h1m3 0h1m1 0h2m1 0h1m1 0h1m1 0h3M4 31.5h1m5 0h1m3 0h1m1 0h2m2 0h1m2 0h2m3 0h1m3 0h1m2 0h1M4 32.5h1m1 0h3m1 0h1m1 0h1m2 0h5m3 0h1m4 0h6m1 0h1M4 33.5h1m1 0h3m1 0h1m3 0h1m4 0h1m1 0h1m1 0h1m8 0h2m1 0h2M4 34.5h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m2 0h1m3 0h1m6 0h2m2 0h1M4 35.5h1m5 0h1m2 0h2m1 0h1m2 0h1m1 0h3m1 0h4m3 0h1m2 0h1M4 36.5h7m1 0h1m1 0h2m4 0h2m2 0h2m1 0h3m2 0h2m1 0h2" stroke="currentColor" fill="none"/></svg>
                     <span>BOX 3B</span>
                   </span>
                   <span class="files"><b class="rule">No scan, no handover.</b><span class="plain">QR scan and photo on file</span></span>
@@ -179,10 +426,10 @@
           <div class="terminal" id="install">
             <div class="terminal-bar">
               <span>Terminal preview</span>
-              <button class="copy" type="button" title="Copies the one-line command" data-copy-text="curl -fsSL https://raw.githubusercontent.com/SpaceWorks-HQ/SpaceWorks/main/install.sh | bash">Copy command</button>
+              <button class="copy" type="button" title="Copies the one-line command" data-copy-text="curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash">Copy command</button>
             </div>
 <pre class="transcript code-text"><span class="cmd">$ <code>curl -fsSL \
-    https://raw.githubusercontent.com/SpaceWorks-HQ/SpaceWorks/main/install.sh \
+    https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh \
     | bash</code></span>
 <span class="gap" aria-hidden="true"></span>Deployment summary
 <span data-summary>  Areas: inventory,machines,events,membership,reports; edition: makerspace</span></pre>
@@ -193,7 +440,7 @@
             </form>
             <p class="terminal-response" data-terminal-response role="status"></p>
           </div>
-          <p class="stage-note">On a Linux server, as a user with sudo. The installer asks every question first and changes nothing until you confirm. <a href="https://github.com/SpaceWorks-HQ/SpaceWorks/blob/main/install.sh">Read install.sh</a></p>
+          <p class="stage-note">On a Linux server, as a user with sudo. The installer asks every question first and changes nothing until you confirm. <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/blob/main/install.sh">Read install.sh</a></p>
         </div>
         <fieldset class="addons">
           <legend class="sr-only">Add to any box</legend>
@@ -275,7 +522,7 @@
               <li><b>Updates</b> from GitHub releases, with a backup first</li>
             </ul></details>
         </div>
-        <p class="modules-foot"><a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/guides/modules/">Every module, what it adds and what happens without it</a></p>
+        <p class="modules-foot"><a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/guides/modules/">Every module, what it adds and what happens without it</a></p>
       </div>
     </section>
     <section id="ecosystem" class="ecosystem-section section" aria-labelledby="ecosystem-heading">
@@ -292,7 +539,7 @@
             <span class="surface-tag is-live">Live</span>
             <h3>The server</h3>
             <p>One Docker install runs the API, database, storage and background jobs, for one space or many.</p>
-            <a class="surface-link" href="https://github.com/SpaceWorks-HQ/SpaceWorks">Source <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+            <a class="surface-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks">Source <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           </article>
           <article class="surface">
             <span class="surface-tag is-live">Live</span>
@@ -313,22 +560,74 @@
             <span class="surface-tag">In development</span>
             <h3>iOS app</h3>
             <p>Native SwiftUI for iPhone, on iOS 17 and later. Point it at your own server.</p>
-            <a class="surface-link" href="https://github.com/SpaceWorks-HQ/SpaceWorks-iOS">Follow along <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+            <a class="surface-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks-iOS">Follow along <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           </article>
           <article class="surface">
             <span class="surface-tag">In development</span>
             <h3>Android app</h3>
             <p>Native Kotlin and Compose for phones and tablets, on Android 8 and later.</p>
-            <a class="surface-link" href="https://github.com/SpaceWorks-HQ/SpaceWorks-Android">Follow along <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+            <a class="surface-link" href="https://github.com/SpaceWorks-Labs/SpaceWorks-Android">Follow along <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
           </article>
         </div>
-        <p class="surfaces-foot">Also part of it: <a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/">the docs</a>, <a href="https://spaceworks-hq.github.io/SpaceWorks-Design/">the design system</a> every app draws from, and <a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/api/overview/">an open REST API</a> with signed webhooks for your own tools.</p>
+        <p class="surfaces-foot">Also part of it: <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">the docs</a>, <a href="https://spaceworks-labs.github.io/SpaceWorks-Design/">the design system</a> every app draws from, and <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/api/overview/">an open REST API</a> with signed webhooks for your own tools.</p>
+      </div>
+    </section>
+    <section id="apps" class="apps-section section" aria-labelledby="apps-heading">
+      <div class="wrap">
+        <div class="modules-head">
+          <div><p class="eyebrow">06 / The whole platform, or one app</p><h2 id="apps-heading">Need one part?<br>Take just that.</h2></div>
+          <p class="para">Space Works is free, open-source, self-hosted management software for makerspaces, fab labs, hackerspaces and tool libraries. One install covers inventory and QR tool lending, machines and 3D printing, events, room bookings and memberships, for one space or many. Each standalone app below does one of those jobs on its own install, with its own database.</p>
+        </div>
+        <div class="apps">
+          <a class="app-card" href="inventory/">
+            <span class="surface-tag is-live">Released</span>
+            <h3>Space Works Inventory</h3>
+            <p>A stock room and lending desk: catalogue, QR labels, photo-evidence loans, stock counts and transfers between spaces.</p>
+            <span class="app-more">Inventory and tool lending software <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="machines/">
+            <span class="surface-tag is-live">Released</span>
+            <h3>Space Works Machines</h3>
+            <p>3D printers, laser cutters and CNC: job requests with a fair queue, pricing and payments, consumables, repairs and maintenance.</p>
+            <span class="app-more">Machine and 3D print job management software <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="events/">
+            <span class="surface-tag is-live">Released</span>
+            <h3>Space Works Events</h3>
+            <p>Event pages, registration, free or paid tickets, live QR tickets, offline check-in, badges, feedback and certificates.</p>
+            <span class="app-more">Event registration and ticketing platform <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="bookings/">
+            <span class="surface-tag is-live">Released</span>
+            <h3>Space Works Bookings</h3>
+            <p>Rooms, studios, desks and halls: live availability, approvals, check-in, payments and cancellation policies.</p>
+            <span class="app-more">Room and space booking software <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="organization/">
+            <span class="surface-tag ">In active development</span>
+            <h3>Space Works Organization</h3>
+            <p>Memberships for clubs, associations and alumni bodies: join forms, renewals, UPI and online fees, GST receipts and member cards.</p>
+            <span class="app-more">Membership management software <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="workspace/">
+            <span class="surface-tag is-live">Released</span>
+            <h3>Space Works Workspace</h3>
+            <p>The internal tool for the team running the space: projects and kanban, chat, docs, finance, people, governance and secrets.</p>
+            <span class="app-more">Team operations and back-office software <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+          <a class="app-card" href="mobile/">
+            <span class="surface-tag ">In development</span>
+            <h3>Space Works mobile apps</h3>
+            <p>Native iPhone, iPad and Android apps for members and staff: equipment, loans, bookings, events and QR check-in.</p>
+            <span class="app-more">Makerspace mobile app for iOS and Android <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
     <section id="features" class="features-section section" aria-labelledby="features-heading">
       <div class="wrap">
         <div class="modules-head">
-          <div><p class="eyebrow">06 / The foundations are covered</p><h2 id="features-heading">Made to run.<br>Built to stay yours.</h2></div>
+          <div><p class="eyebrow">07 / The foundations are covered</p><h2 id="features-heading">Made to run.<br>Built to stay yours.</h2></div>
           <p class="para">
             These come with every install, whichever areas you turn on.
           </p>
@@ -386,19 +685,48 @@
       </div>
     </section>
 
+    <section id="faq" class="faq-section section" aria-labelledby="faq-heading">
+      <div class="wrap">
+        <div class="modules-head">
+          <div><p class="eyebrow">08 / Good questions</p><h2 id="faq-heading">Questions,<br>answered.</h2></div>
+          <p class="para">Still unsure? <a href="https://github.com/SpaceWorks-Labs/.github/blob/main/SUPPORT.md">Ask the community</a> or read <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">the docs</a>.</p>
+        </div>
+        <div class="faq-list" aria-labelledby="faq-heading">
+          <details class="faq-item"><summary><h3>What is Space Works?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Space Works is free, open-source, self-hosted software for makerspaces, fab labs, hackerspaces, tool libraries and the communities around them. The main platform covers inventory and tool lending, machines and 3D printing, events, bookings and memberships in one install. Six standalone apps cover one of those jobs each.</p></details>
+          <details class="faq-item"><summary><h3>Is Space Works free?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. Every Space Works project is open source under the GNU Affero General Public License v3 (AGPL-3.0). There is no licence fee. You can use, study, modify and share it, including for commercial work, and you pay only for the server you host it on.</p></details>
+          <details class="faq-item"><summary><h3>How do I install Space Works?</h3><span class="expand" aria-hidden="true">+</span></summary><p>On a Linux server, as a user with sudo, run the one-line installer: curl -fsSL https://raw.githubusercontent.com/SpaceWorks-Labs/SpaceWorks/main/install.sh | bash. It asks every question first, changes nothing until you confirm, and runs the platform with Docker Compose. The documentation covers manual installs and hosting options.</p></details>
+          <details class="faq-item"><summary><h3>Do I need the whole platform or one app?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Start with the main Space Works platform if you run a whole makerspace. If you only need one job done, the standalone apps (Inventory, Machines, Events, Bookings, Organization and Workspace) each install on their own with their own database. Running several apps does not automatically combine their accounts or data; they connect through REST APIs and webhooks where supported.</p></details>
+          <details class="faq-item"><summary><h3>Can one installation run several makerspaces?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Yes. One Space Works server can host many makerspaces, each fully separate with its own members, inventory, roles, settings and audit trail. Networks, universities and chains can link spaces under one organisation with a shared event catalogue.</p></details>
+          <details class="faq-item"><summary><h3>Does Space Works take payments?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Payments are optional. The main platform supports Stripe or Razorpay checkout; without them, fees and deposits are tracked and settled at the desk. The standalone Events, Bookings, Machines and Organization apps take Razorpay, Stripe or offline payments, and Organization adds UPI and GST receipts for Indian organisations.</p></details>
+          <details class="faq-item"><summary><h3>Is there a mobile app?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Native iOS (SwiftUI, iOS 17 and later) and Android (Kotlin and Jetpack Compose, Android 8 and later) apps are in development. Both connect to your own Space Works server for equipment, requests, loans, bookings, events and QR workflows.</p></details>
+          <details class="faq-item"><summary><h3>Where is my data stored?</h3><span class="expand" aria-hidden="true">+</span></summary><p>On your own server. Space Works is self-hosted, so member, inventory and payment records stay in your database. Personal data is encrypted per space, integration secrets are encrypted at rest, and backups are encrypted and signed.</p></details>
+          <details class="faq-item"><summary><h3>Who makes Space Works?</h3><span class="expand" aria-hidden="true">+</span></summary><p>Space Works was started by Shaan Shoukath at TinkerSpace Kochi, a community makerspace by TinkerHub in Kerala, India, and is built in the open by the Space Works community on GitHub. It runs at TinkerHub Kochi and TinkerHub Calicut, serving more than 1,000 members.</p></details>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="colophon">
     <div class="wrap closing-inner"><div><p class="eyebrow">There’s a place for your next idea.</p><h2 id="closing-heading">Let’s get making.</h2></div><a class="btn btn-solid" href="#install">Set up your space <svg class="arrow" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
     <div class="wrap colophon-row">
       <a class="brand" href="#main" aria-label="Space Works home"><img src="assets/brand/lockup-horizontal.svg" width="360" height="58" alt=""></a>
-      <p class="code-text">0.9.2 · released 14 Oct 2026 · AGPL-3.0 · free software for shared tools</p>
+      <p class="code-text">0.9.3 · released 8 Nov 2026 · AGPL-3.0 · free software for shared tools</p>
+      <nav aria-label="Apps">
+        <a href="inventory/">Inventory</a>
+        <a href="machines/">Machines</a>
+        <a href="events/">Events</a>
+        <a href="bookings/">Bookings</a>
+        <a href="organization/">Organization</a>
+        <a href="workspace/">Workspace</a>
+        <a href="mobile/">Mobile apps</a>
+      </nav>
       <nav aria-label="Project">
-        <a href="https://github.com/SpaceWorks-HQ/SpaceWorks">GitHub</a>
-        <a href="https://github.com/SpaceWorks-HQ/SpaceWorks/releases">Releases</a>
-        <a href="https://github.com/SpaceWorks-HQ/SpaceWorks/blob/main/CHANGELOG.md">Changelog</a>
-        <a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/">Docs</a>
-        <a href="https://spaceworks-hq.github.io/SpaceWorks-Docs/install/one-line-install/">Self-hosting</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks">GitHub</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/releases">Releases</a>
+        <a href="https://github.com/SpaceWorks-Labs/SpaceWorks/blob/main/CHANGELOG.md">Changelog</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/">Docs</a>
+        <a href="https://spaceworks-labs.github.io/SpaceWorks-Docs/install/one-line-install/">Self-hosting</a>
       </nav>
     </div>
   </footer>

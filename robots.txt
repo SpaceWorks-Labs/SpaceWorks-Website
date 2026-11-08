@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spaceworks-labs.github.io/SpaceWorks-Website/sitemap.xml

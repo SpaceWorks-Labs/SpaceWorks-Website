@@ -269,13 +269,68 @@ td:nth-child(2) { width: 20%; }
 .colophon-row nav { display: flex; flex-wrap: wrap; gap: 24px; margin-left: auto; font-size: 14px; }
 .colophon-row nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
 
+/* Standalone apps: one card per product page. */
+.apps-section { background: var(--cream); }
+.apps-section .modules-head .para a, .faq-section .modules-head .para a { text-decoration: underline; text-underline-offset: 4px; }
+.apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 56px; }
+.app-card { display: flex; flex-direction: column; align-items: flex-start; padding: 28px 0 36px; border-top: 1px solid var(--line); }
+.app-card h3 { font-size: 21px; margin-top: 16px; }
+.app-card p { margin-top: 10px; font-size: 16px; color: var(--muted); }
+.app-more { display: inline-flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 18px; font-size: 15px; font-weight: 600; color: var(--teal); }
+.app-card:hover h3, .app-card:hover .app-more { text-decoration: underline; text-underline-offset: 5px; }
+
+/* Questions: plain details/summary, crawlable and readable without script. */
+.faq-section { background: var(--cream); }
+.faq-list { max-width: 900px; }
+.faq-item { border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item summary { display: flex; align-items: center; gap: 16px; min-height: 72px; padding: 18px 0; list-style: none; cursor: pointer; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { font-size: 20px; font-weight: 500; }
+.faq-item summary:hover { color: var(--teal); }
+.faq-item[open] .expand { transform: rotate(45deg); }
+.faq-item p { padding: 0 0 26px; max-width: 46rem; color: var(--muted); font-size: 17px; }
+
+/* Product pages */
+.subpage .section, .page-section { min-height: 0; }
+.page-section { padding-block: 96px; }
+.page-hero { padding: 72px 0 88px; background: var(--cream); }
+.page-hero .wrap { max-width: 1160px; }
+.crumbs { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+.crumbs a { text-decoration: underline; text-underline-offset: 4px; }
+.page-hero h1 { font-size: clamp(2.6rem, 5.2vw, 4.75rem); line-height: 1.04; letter-spacing: -.045em; max-width: 16ch; }
+.definition { margin-top: 28px; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.4; letter-spacing: -.01em; max-width: 44rem; }
+.page-hero .para { max-width: 44rem; }
+.page-hero .actions { justify-content: flex-start; margin-top: 36px; }
+.page-hero .btn { --action: var(--orange); --action-text: var(--ink); --action-hover: #FF875F; }
+.facts-section { padding-block: 0; background: var(--cream); }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 56px; margin: 0; padding-bottom: 72px; }
+.facts > div { padding: 22px 0; border-top: 1px solid var(--line); }
+.facts dt { font-size: 13px; color: var(--muted); }
+.facts dd { margin: 6px 0 0; font-size: 17px; font-weight: 500; }
+.facts dd a { text-decoration: underline; text-underline-offset: 4px; }
+.subpage .features-section .modules-head { text-align: left; }
+.feature-groups ul { list-style: none; margin: 14px 0 0; padding: 0; }
+.feature-groups li { position: relative; padding: 7px 0 7px 20px; color: var(--muted); font-size: 16px; }
+.feature-groups li::before { content: ""; position: absolute; left: 0; top: 17px; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+.install-section { background: var(--teal); color: var(--cream); --text: var(--cream); --muted: var(--cream); --line: #619D94; --focus: var(--yellow); }
+.install-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px 96px; align-items: start; }
+.install-section .para a, .install-alt a { text-decoration: underline; text-underline-offset: 4px; }
+.install-alt { margin-top: 14px; font-size: 15px; }
+.more-apps { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 40px; font-size: 15px; color: var(--muted); }
+.more-apps a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.not-found { min-height: 100dvh; display: grid; align-items: center; padding-block: 96px; }
+.not-found h1 { font-size: clamp(2.6rem, 5vw, 4.5rem); letter-spacing: -.045em; }
+.not-found .para a { text-decoration: underline; text-underline-offset: 4px; }
+
 @media (max-width: 1100px) {
   .wrap { width: min(100% - 64px, 1320px); }
   .nav-links { gap: 22px; font-size: 14px; }.brand img { width: 260px; }
   .section-heading, .modules-head, .lending-grid { gap: 48px; }
   .box-section .grid { gap: 0 48px; }.inventory-sidebar { padding-inline: 18px; }.inventory-window { grid-template-columns: 200px 1fr; }
   .inventory-content { padding: 28px 24px; }.benefits { gap: 30px; }
-  .surfaces { grid-template-columns: 1fr 1fr; gap: 0 48px; }
+  .surfaces, .apps, .facts { grid-template-columns: 1fr 1fr; gap: 0 48px; }
+  .install-grid { gap: 40px 56px; }
 }
 @media (max-width: 800px) {
   :root { --header-height: 76px; }
@@ -304,7 +359,9 @@ td:nth-child(2) { width: 20%; }
   .deployment-locations { gap: 40px; }.deployment-metric { margin-top: 56px; }
   .lending-grid { grid-template-columns: 1fr; grid-template-areas: "copy" "record"; gap: 36px; }.lending-copy { text-align: left; }.lending-copy .para, .lending-copy .lending-detail { margin-left: 0; }.lending-copy .example-label { margin-top: 26px; }.lending-copy .example-label .arrow { transform: none; }
   .box-section .grid { grid-template-columns: 1fr; }.stage { grid-column: 1; grid-row: auto; position: static; padding-top: 40px; order: 4; }.addons { grid-row: 2; }.always { grid-row: 3; }
-  .catalogue, .features, .surfaces { grid-template-columns: 1fr; }.module summary { min-height: 70px; font-size: 20px; }.feature p { max-width: 100%; }
+  .catalogue, .features, .surfaces, .apps, .facts, .install-grid { grid-template-columns: 1fr; }
+  .page-section { padding-block: 64px; }.page-hero { padding: 48px 0 64px; }.crumbs { margin-bottom: 28px; }.facts { padding-bottom: 48px; }
+  .faq-item summary h3 { font-size: 18px; }.faq-item p { font-size: 16px; }.module summary { min-height: 70px; font-size: 20px; }.feature p { max-width: 100%; }
   .closing-inner { grid-template-columns: 1fr; justify-items: center; gap: 20px; text-align: center; }.closing-inner .btn { justify-self: center; }
   .colophon-row { gap: 24px; }.colophon-row .brand img { width: 230px; }.colophon-row nav { width: 100%; margin: 0; gap: 20px; }
 }
