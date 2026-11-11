@@ -129,8 +129,8 @@ def head(title, description, page_url, prefix, image_alt, extra=""):
   <meta name="color-scheme" content="light">
   <link rel="icon" href="{prefix}assets/mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
-  <link rel="preload" href="{prefix}fonts/Gilroy-Regular.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="{prefix}fonts/Gilroy-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="{prefix}fonts/Outfit-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{prefix}fonts/Gilroy-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="alternate" type="text/plain" title="LLM summary" href="{URL}llms.txt">
   <meta property="og:site_name" content="Space Works">
   <meta property="og:locale" content="en_IN">
